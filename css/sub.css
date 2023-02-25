@@ -2,6 +2,7 @@
 
 .content_wrap{padding: 162px 0 50px;}
 main{overflow-x: hidden;}
+.com_branch_wrap{padding-top: 114px; margin-top: 50px;}
 
 /* 공통 */
 .sub_count{text-align: center;}
@@ -77,34 +78,6 @@ main{overflow-x: hidden;}
 .sub_tit.st .sub_text_box{top:74px;}
 .sub_tit.st .sub_text_box h2{font-weight: 700; font-size: 40px; color: #fff;}
 .sub_tit.st .sub_text_box em{margin-bottom: 14px;}
-
-
-.com_branch_wrap2{padding: 112px 0 117px; border-top: 2px solid #0f0f0f;}
-.com_branch_wrap{padding: 158px 0 117px;}
-.com_branch_wrap .com_branch{position: relative;}
-.com_branch_wrap .com_branch .com_tit{margin-bottom: 76px;}
-.com_branch_wrap .com_branch .com_tit h3{font-size: 70px; font-family: 'Constantia'; color: #0e0e0e; font-weight: 400; letter-spacing: -1px;} 
-.com_branch_wrap .com_branch .com_tit span{font-weight: 500; font-size: 17px; color: #0f0f0f;}
-.com_branch_wrap .branch_wrap{display: flex; gap:0 82px;}
-.com_branch_wrap .branch_wrap .branch_left{padding-left: 126px;}
-.com_branch_wrap .branch_wrap .branch_left img{display: block;}
-.com_branch_wrap .branch_wrap .branch_right{margin-top: 53px;}
-.com_branch_wrap .branch_wrap .branch_right .info{display: flex; gap: 0 61px; padding: 65px 46px 69px 73px; height: 524px; width: 797px; border-radius: 35px; border: 1px solid #eaeff0; background-color: #eef6f5;}
-.com_branch_wrap .branch_wrap .branch_right .info .info_left h4{margin-bottom: 29px; font-weight: 300; font-size: 32px; color: #272727; letter-spacing: -2px;}
-.com_branch_wrap .branch_wrap .branch_right .info .info_left h4 span{font-weight: 700;}
-.com_branch_wrap .branch_wrap .branch_right .info .info_left em{font-size: 40px; font-weight: 700; color: #009f93; font-family: 'Noto Sans KR', sans-serif; letter-spacing: -2px;}
-.com_branch_wrap .branch_wrap .branch_right .info .info_left address{margin-bottom: 27px; font-size: 17px; color: #838383; line-height: 34px;}
-.com_branch_wrap .branch_wrap .branch_right .info .info_right .info_link{margin-bottom: 23px; display: flex; gap: 0 8px;}
-.com_branch_wrap .branch_wrap .branch_right .info .info_right .info_link a{display: block; width: 123px; height: 41px; line-height: 41px; background-color: #009f93; color: #fff; border-radius: 10px; font-weight: 700; font-size: 15px; text-align: center;}
-.com_branch_wrap .branch_wrap .branch_right .info .info_right .info_box{display: flex; padding: 15px 0; border-bottom: 1px solid #dfe7e6;}
-.com_branch_wrap .branch_wrap .branch_right .info .info_right .info_box:nth-of-type(1){padding-bottom: 25px;}
-.com_branch_wrap .branch_wrap .branch_right .info .info_right .info_box_right p{margin-bottom: 4px; color: #3f4241;}
-.com_branch_wrap .branch_wrap .branch_right .info .info_right .info_box_right p:last-child{margin-bottom: 0;}
-.com_branch_wrap .branch_wrap .branch_right .info .info_right .info_box_left{width: 136px; color: #3f4241;}
-.com_branch_wrap .find_btn{position: absolute; top:72px; right:0; padding:0 28px 0 35px; display: flex; align-items: center; min-width: 263px; height: 53px; border-radius: 50px; font-size: 22px; color: #fff; background-color: #009f93; font-weight: 700; letter-spacing: -1px;}
-.com_branch_wrap .find_btn span{position: relative; padding-right: 28px;}
-.com_branch_wrap .find_btn span::after{content: ''; position: absolute; top: 12px; right:0; padding: 12px 21px 0 0; background: url(../images/com_icon2.png)no-repeat;}
-.com_branch_wrap .find_btn:hover span::after{animation: effect .3s alternate infinite ease-in;}
 
 .com_top_st{margin-bottom: 87px; display: flex; gap: 0 108px; align-items: center; justify-content: center;}
 .com_top_st h3{position: relative; font-size: 22px; color: #019b8d; font-weight: 700;}
@@ -465,7 +438,7 @@ main{overflow-x: hidden;}
 .com_tab li{flex:1; margin-right: -1px;}
 .com_tab li a{display: block; height: 55px; line-height: 53px; border: 1px solid #d9d9d9; color: #2f2f2f; background-color: #f2f2f2; font-size: 16px; text-align: center; font-weight: 500px; }
 .com_tab li a.active{background-color: #019b8d; font-weight: 700; color: #fff;}
-.reservation_box{padding: 0 96px;}
+.reservation_box{padding: 0 96px 36px;}
 .reservation_box .reservation_text_wrap ul.reservation_text1{margin-bottom: 43px; padding: 41px 0 41px 65px; background-color: #f2f2f2; border: 1px solid #dcdcdc;}
 .reservation_box .reservation_text_wrap ul.reservation_text2{margin-left: 15px;}
 .reservation_box .reservation_text_wrap ul li{font-weight: 500; color: #333;}
@@ -543,3 +516,30 @@ select{border-radius:0; }
 .com_checkbox_wrap.agree{margin: 14px 0 40px; text-align: center;}
 .com_checkbox_wrap.agree + .com_btn_wrap{justify-content: center;}
 .com_checkbox_wrap.agree + .com_btn_wrap a{width: 195px;}
+
+/* 생기지식인 */
+.knowledge_wrap  .com_branch_wrap{margin-top: 76px;}
+.knowledge_box .knowledge_top_text{margin-bottom: 50px; text-align: center; font-weight: 500; color: #0f0f0f; font-size: 20px; line-height: 1.8;}
+.knowledge_box .com_search_wrap{align-items: flex-end;}
+.knowledge_box .com_search_wrap .search{width: 234px; margin-right: 33px;}
+.knowledge_box .com_search_wrap .search_btn{width: 142px; height: 72px; background: #009f93 url(../images/sub/search_icon.jpg)no-repeat center; }
+.knowledge_box .knowledge_search_text{margin-bottom: 95px; font-weight: 700; font-size: 20px; color: #0f0f0f; text-align: center;}
+.knowledge_box .knowledge_search_text span{font-weight: 500; color: #019b8d; }
+.knowledge_box .search_list_box .search_list{margin-bottom: 90px; padding: 25px 45px; display: flex; justify-content: center; flex-wrap: wrap; gap: 0 34px; background-color: #f4f9f4; border-radius: 30px;}
+.knowledge_box .search_list_box .search_list li{position: relative;}
+.knowledge_box .search_list_box .search_list li:last-child::after{display: none;}
+.knowledge_box .search_list_box .search_list li::after{content: ''; position: absolute; right:-18px; top:15px; width: 1px; height: 24px; background-color:#bec0be ;}
+.knowledge_box .search_list_box .search_list li a{display: block; font-weight: 700; font-size: 22px; color: #0e0e0e; line-height: 50px;}
+.knowledge_box .search_list_box .search_list li a.active{color: #009c8e;}
+.knowledge_box .com_search_wrap .search::placeholder{font-weight: 500;}
+.knowledge_box .knowledge_content_list{display: flex; gap: 40px 60px; flex-wrap: wrap; padding:90px 0 39px; border-top: 2px solid #0f0f0f;}
+.knowledge_box .knowledge_content_list li{width: 47.97%; padding: 41px 23px 60px 43px; display: flex; gap: 0 40px; border: 1px solid #dadada; background-color: #f4f4f4; align-self: flex-start;}
+.knowledge_box .knowledge_content_list li .knowledge_content_left .disease_name{display: inline-block; margin-bottom: 24px; padding: 9px 23px; font-size: 14px; color: #fff; border-radius: 50px; background-color: #019b8d;}
+.knowledge_box .knowledge_content_list li .knowledge_content_right{padding: 27px 0 0;}
+.knowledge_box .knowledge_content_list li .knowledge_content_right .img{position: relative; width: 190px; height: 255px; background-color: #afafaf;}
+.knowledge_box .knowledge_content_list li .knowledge_content_right .img img{position: absolute; left: -100%; right: -100%; top: -100%; bottom: -100%; max-width: 100%; max-height: 100%; margin: auto;}
+.knowledge_box .knowledge_content_list li dl{display: flex; gap: 0 24px;}
+.knowledge_box .knowledge_content_list li dl dt p em{font-weight: 700; color: #019b8d; font-size: 22px;}
+.knowledge_box .knowledge_content_list li dl.question{margin-bottom: 27px;}
+.knowledge_box .knowledge_content_list li dl.question dd{color: #272727; font-size: 22px; font-weight: 700; line-height: 1.4;}
+.knowledge_box .knowledge_content_list li dl.answer dd{color: #272727; font-size: 22px;}
