@@ -1,4 +1,4 @@
-@charset "utf-8";
+ @charset "utf-8";
 
 .content_wrap{padding: 162px 0 50px;}
 main{overflow-x: hidden;}
@@ -525,12 +525,12 @@ select{border-radius:0; }
 .knowledge_box .com_search_wrap .search_btn{width: 142px; height: 72px; background: #009f93 url(../images/sub/search_icon.jpg)no-repeat center; }
 .knowledge_box .knowledge_search_text{margin-bottom: 95px; font-weight: 700; font-size: 20px; color: #0f0f0f; text-align: center;}
 .knowledge_box .knowledge_search_text span{font-weight: 500; color: #019b8d; }
-.knowledge_box .search_list_box .search_list{margin-bottom: 90px; padding: 25px 45px; display: flex; justify-content: center; flex-wrap: wrap; gap: 0 34px; background-color: #f4f9f4; border-radius: 30px;}
-.knowledge_box .search_list_box .search_list li{position: relative;}
-.knowledge_box .search_list_box .search_list li:last-child::after{display: none;}
-.knowledge_box .search_list_box .search_list li::after{content: ''; position: absolute; right:-18px; top:15px; width: 1px; height: 24px; background-color:#bec0be ;}
-.knowledge_box .search_list_box .search_list li a{display: block; font-weight: 700; font-size: 22px; color: #0e0e0e; line-height: 50px;}
-.knowledge_box .search_list_box .search_list li a.active{color: #009c8e;}
+.search_com_box .search_com_list{margin-bottom: 90px; padding: 25px 45px; display: flex; justify-content: center; flex-wrap: wrap; gap: 0 34px; background-color: #f4f9f4; border-radius: 30px;}
+.search_com_box .search_com_list li{position: relative;}
+.search_com_box .search_com_list li:last-child::after{display: none;}
+.search_com_box .search_com_list li::after{content: ''; position: absolute; right:-18px; top:15px; width: 1px; height: 24px; background-color:#bec0be ;}
+.search_com_box .search_com_list li a{display: block; font-weight: 700; font-size: 22px; color: #0e0e0e; line-height: 50px; letter-spacing: -1px;}
+.search_com_box .search_com_list li a.active{color: #009c8e;}
 .knowledge_box .com_search_wrap .search::placeholder{font-weight: 500;}
 .knowledge_box .knowledge_content_list{display: flex; gap: 40px 60px; flex-wrap: wrap; padding:90px 0 39px; border-top: 2px solid #0f0f0f;}
 .knowledge_box .knowledge_content_list li{width: 47.97%; padding: 41px 23px 60px 43px; display: flex; gap: 0 40px; border: 1px solid #dadada; background-color: #f4f4f4; align-self: flex-start;}
@@ -543,3 +543,24 @@ select{border-radius:0; }
 .knowledge_box .knowledge_content_list li dl.question{margin-bottom: 27px;}
 .knowledge_box .knowledge_content_list li dl.question dd{color: #272727; font-size: 22px; font-weight: 700; line-height: 1.4;}
 .knowledge_box .knowledge_content_list li dl.answer dd{color: #272727; font-size: 22px;}
+
+/* 치료사례 */
+.example_box .sub_count{display: flex; gap: 0 125px; align-items: flex-start;}
+.example_box .sub_count p{font-weight: 400;}
+.example_box .sub_count p em{line-height: .7;}
+.example_box .example_list{display: flex; flex-wrap: wrap; gap: 106px 60px; padding: 91px 0 60px; border-top: 2px solid #0f0f0f;}  
+.example_box .example_list li .text{display: flex;}
+.example_box .example_list li .text .box{position: relative; flex: 1; line-height: 1; text-align: center;}
+.example_box .example_list li .text .box:last-child::after{display: none;}
+.example_box .example_list li .text .box::after{content: ''; position: absolute; top:0; right:0; width: 1px; height: 53px; background-color: #ced2ce;}
+.example_box .example_list li .img{display: flex; width: 705px; height: 235px; margin-bottom: 32px;}
+.example_box .example_list li .img > div{position: relative; width: 352px; height: 235px;}
+.example_box .example_list li .img > div.example_bofore_img{background-color: #b5b5b5;}
+.example_box .example_list li .img > div.example_after_img{background-color: #a7a7a7;}
+.example_box .example_list li .img > div span{position: absolute; top:10px; left:10px; width: 37px; height: 37px; line-height: 37px; text-align: center; font-size: 14px; font-weight: 700; color: #fff; border-radius: 50%;}
+.example_box .example_list li .img > div span.example_bofore_text{background-color: #9a9d9a;}
+.example_box .example_list li .img > div span.example_after_text{background-color: #009f93;}
+.example_box .example_list li .img img{display: block; width: 100%; height: 100%; object-fit: cover;}
+.example_box .example_list li .text .box span{display: block; margin-bottom: 15px; font-size: 15px; color: #272727;}
+.example_box .example_list li .text .box em{font-size: 22px; color: #0f0f0f; font-weight: 700;}
+.example_box .com_branch_wrap{margin-top: 75px;}
