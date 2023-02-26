@@ -1,6 +1,5 @@
 $(function () {
 
-    /* com_review_wrap */
     $('.com_review_wrap .slick').slick({
         arrows: true,
         accessibility: false,
@@ -12,11 +11,25 @@ $(function () {
         speed: 500,
     });
 
-    /* reservation */
     $('.reservation_box .time_lsit li a').click(function () {
         $('.reservation_box .time_lsit li a').removeClass('active');
         $(this).addClass('active');
         return false;
     });
+
+    /* 고객후기 */
+    $('.review_content_box').hide();
+    $('.review_content_box').first().show();
+    $('.review_box .com_tab2 li').click(function () {
+        $('.review_box .com_tab2 li').children().removeClass('active');
+        $(this).children().addClass('active');
+        var Idx = $(this).index();
+        $('.review_content_box').hide();
+        $('.review_content_box').eq(Idx).show();
+        return false;
+    });
+
+
+
 
 });
