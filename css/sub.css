@@ -2,7 +2,8 @@
 
 .content_wrap{padding: 162px 0 50px;}
 main{overflow-x: hidden;}
-.com_branch_wrap{padding-top: 114px; margin-top: 50px;}
+.com_branch_wrap2{margin-top: 50px;}
+.com_branch_wrap .com_branch{padding-top: 114px;}
 
 /* 공통 */
 .sub_count{text-align: center;}
@@ -249,7 +250,7 @@ main{overflow-x: hidden;}
  /* 생기한약시스템 */
 .system_box1_wrap{margin-top: -162px; padding: 153px 0 355px; background: url(../images/sub/system_box1_bg.jpg)no-repeat; background-size: cover;}
 .system_box1_wrap .text_img{margin-bottom: 66px;}
-.system_box2_wrap{position: relative; padding: 170px 0 186px;  background: url(../images/sub/system_box2_bg.jpg)no-repeat; background-size: cover; background-position-y: -12px;}
+.system_box2_wrap{position: relative; padding: 170px 0 186px;  background: url(../images/sub/system_box2_bg.jpg)no-repeat; background-size: cover;}
 .system_box2_wrap::after{content: ''; padding: 634px 444px 0 0; position: absolute; top:-265px; left: 50%; transform: translateX(-50%); background: url(../images/sub/system_box2_img.png)no-repeat;}
 .system_box2 .com_tit_box2 span{margin-bottom: 17px;}
 .system_box2 .com_tit_box2.st h3{margin-bottom: 46px;}
@@ -264,6 +265,7 @@ main{overflow-x: hidden;}
 .system_box5_wrap{padding: 171px 0 236px; background: url(../images/sub/system_box5_bg.jpg)no-repeat; background-size: cover;}
 
 /* 생기스토리 */
+.story_wrap .com_branch_wrap{margin-top: 38px;}
 .story_box1_wrap{padding: 30px 0 0; }
 .story_box1 {position: relative; height: 2521px; border-bottom: 1px solid #0f0f0f;}
 .story_box1 .com_tit_box2 p{margin-bottom: 52px;}
@@ -313,6 +315,7 @@ main{overflow-x: hidden;}
 .story_box6_wrap .com_rayout_box1 .com_rayout_right .text p:nth-of-type(1){margin-bottom: 30px;}
 
 /* 생기피부과학연구소 */
+.skin_wrap .com_branch_wrap{margin-top: 50px;}
 .skin_box1_wrap{background: url(../images/sub/skin_box1_bg.jpg)no-repeat; background-size: cover; background-position-y: 50px;}
 .skin_box1{padding: 30px 0 155px; border-bottom: 1px solid #0f0f0f;}
 .skin_box1 .com_rayout_box1{gap: 0 238px;}
@@ -367,25 +370,67 @@ main{overflow-x: hidden;}
 
 /* 생기홈케어 */
 .com_tit_box1 h3 em{font-family: 'Constantia'; color: #009a8e; font-weight: 400;}
+.homecare_box1_wrap{padding: 0 0 170px;}
 .homecare_box1 .com_tit_box1 h3,
-.homecare_box1 .com_tit_box1 p{text-align: left;}
+.homecare_box1 .com_tit_box1 p{text-align: left; letter-spacing: -1px;}
 .homecare_box1 .homecare_box1_img{margin: -56px 0 0  277px; }
 .homecare_box1 .homecare_box1_text{margin-top: -66px; padding-right: 87px; display: flex; flex-direction: column; align-items: flex-end;}
 .homecare_box1 .homecare_box1_text h4{margin-bottom: 36px; font-weight: 700; font-size: 37px; color:#0f0f0f; letter-spacing: -1px;} 
 .homecare_box1 .homecare_box1_text p{color: #0f0f0f; font-weight: 500; line-height: 36px;}
-.homecare_wrap{padding: 30px 0 167px;}
-.homecare_wrap .effect_text{display: block; margin:28px 0 0 -40px;  font-size: 128px; font-family: 'Constantia'; color: #dfe7e6; white-space: nowrap; text-align: center;}
-.homecare_wrap .line_list{margin-top: 55px; display: flex; justify-content: center; gap: 0 20px;}
-.homecare_wrap .line_list li .img{margin-bottom: 22px;}
-.homecare_wrap .line_list li .img img{display: block;}
-.homecare_wrap .line_list li span{font-weight: 700; color:#0f0f0f; font-size: 32px;}
-.homecare_wrap .line_list li span em{font-family: 'Constantia';}
-.homecare_box2 .homecare_box2_list li{display: flex; align-items: center;}
+.homecare_box1 .effect_text{display: block; margin:28px 0 0 -40px;  font-size: 128px; font-family: 'Constantia'; color: #dfe7e6; white-space: nowrap; text-align: center;}
+.homecare_box1 .line_list{margin-top: 43px; display: flex; justify-content: center; gap: 0 20px;}
+.homecare_box1 .line_list li .img{margin-bottom: 22px;}
+.homecare_box1 .line_list li .img img{display: block;}
+.homecare_box1 .line_list li span{font-weight: 700; color:#0f0f0f; font-size: 32px;}
+.homecare_box1 .line_list li span em{font-family: 'Constantia'; font-weight: 400; letter-spacing: -1px;}
+.homecare_box2_wrap{padding: 154px 0 245px; background-color: #f4f9f4;}
+.homecare_box2 .homecare_box2_list li:nth-child(1) .box1 .img{width: 706px; height: 529px;}
+.homecare_box2 .homecare_box2_list li:nth-child(2) .box1 .img{width: 618px; height: 618px;}
+.homecare_box2 .homecare_box2_list li:nth-child(3) .box1 .img{width: 625px; height: 619px;}
+.homecare_box2 .homecare_box2_list li:nth-child(even){flex-direction: row-reverse;}
+.homecare_box2 .homecare_box2_list li:nth-child(1){justify-content: flex-start; margin-bottom: 58px; gap: 0 139px;}
+.homecare_box2 .homecare_box2_list li:nth-child(2){margin-bottom: 185px; gap: 0 70px;}
+.homecare_box2 .homecare_box2_list li:nth-child(2) .box2{padding-left: 202px;}
+.homecare_box2 .homecare_box2_list li:nth-child(3){margin-bottom: 190px; gap: 0 139px; }
+.homecare_box2 .homecare_box2_list li:nth-child(3) .box2 img{margin-top: 52px;}
+.homecare_box2 .homecare_box2_list li:nth-child(4){gap: 0 83px;}
+.homecare_box2 .homecare_box2_list li:nth-child(4) .box2{padding: 28px 0 0 176px; text-align: left;}
+.homecare_box2 .homecare_box2_list li:nth-child(4) .box2 img{margin-top: 92px;}
+.homecare_box2 .homecare_box2_list li > div{text-align: center;}
+.homecare_box2 .homecare_box2_list li{display: flex; align-items: center; justify-content: space-between;}
 .homecare_box2 .homecare_box2_list li .img{border-radius: 5px; overflow: hidden;}
-.homecare_box2 .homecare_box2_list li .img img{display: block;}
-.homecare_box2 .homecare_box2_list li .com_tit_box1 h3{text-align: left; font-size: 33px;}
-.homecare_box2 .homecare_box2_list li .com_tit_box1 p{text-align: left; font-size: 17px;}
-.homecare_box2 .com_tit_box1{margin-bottom: 104px;}
+.homecare_box2 .homecare_box2_list li img{display: block;}
+.homecare_box2 .homecare_box2_list li .com_tit_box1{display: inline-block; margin-bottom: 0;}
+.homecare_box2 .homecare_box2_list li .com_tit_box1 h3{margin-bottom: 13px; text-align: left; font-size: 33px; letter-spacing: -2px;}
+.homecare_box2 .homecare_box2_list li .com_tit_box1 p{margin-bottom: 0; text-align: left; font-size: 17px; letter-spacing: -2px;}
+.homecare_box2 .com_tit_box1{margin-bottom: 76px;}
+.homecare_box3_wrap{padding: 176px 0 182px; background: url(../images/sub/homecare_box3_bg.jpg)no-repeat; background-size: cover;} 
+.homecare_box3 .com_rayout_box1{gap: 0 208px;}
+.homecare_box3 .com_tit_text.st2{margin-bottom: 55px;}
+.homecare_box3 .com_rayout_box1 .com_rayout_left .com_tit_box2 h3{margin-bottom: 56px;}
+.homecare_box3 .com_rayout_box1 .com_rayout_right{padding-top: 123px;}
+.homecare_box3 .com_tit_box2 p{font-size: 16px;}
+.homecare_box3_wrap.st{padding: 186px 0 230px; background: url(../images/sub/homecare_box3_bg2.jpg)no-repeat; background-size: cover;}
+.homecare_box3_wrap.st .com_rayout_right{margin-left: -216px; padding-top: 89px;}
+.homecare_box3_wrap.st .com_rayout_left{align-self: flex-start;}
+.homecare_box3_wrap.st .homecare_box3 .com_rayout_box1{gap: 0 0;}
+.homecare_box3_wrap.st .homecare_box3 .com_tit_text.st2{margin-bottom: 65px; white-space: nowrap;}
+.homecare_box3_wrap.st .homecare_box3 .list_style1{margin-top: 56px; display: flex; gap: 0 8px;}
+.homecare_box3_wrap.st .homecare_box3 .list_style1 li{width: 209px; height: 63px; display: flex; align-items: center; justify-content: center; border-radius: 50px;
+     background-color: #378f90; font-weight: 700; color: #fff;}
+
+
+.homecare_box4_wrap{padding: 164px 0 0;}
+.homecare_box4{position: relative; border-bottom: 1px solid #0f0f0f;}
+.homecare_box4 .com_tit_box2 h3{margin-bottom: 34px; text-align: center;}
+.homecare_box4 .com_tit_box2 p{margin-bottom: 122px; text-align: center;}
+.homecare_box4.st1{height: 1147px;}
+.homecare_box4.st1 img{position: absolute; top:306px ; right:207px;} 
+.homecare_box4.st2{padding: 91px 0 0; height: 1267px;}
+.homecare_box4.st2 img{position: absolute; top:396px ; right:219px;}
+.homecare_box4.st3{padding: 91px 0 0; height: 1013px;}
+.homecare_box4.st3 img{position: absolute; top:630px ; right:145px;}
+
 
 /* 의료진 상담 */
 .consulting_box .com_btn_wrap{margin:30px 0 60px;}

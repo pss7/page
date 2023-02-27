@@ -29,9 +29,8 @@ em.view:hover span::before{width: 0;}
 .view.st span::before{background: #494846;}
 .view.st span::after{background: url(../images/com_icon1.png)no-repeat;}
 
-.com_branch_wrap2{padding: 112px 0 117px; border-top: 2px solid #0f0f0f;}
-.com_branch_wrap{padding: 158px 0 117px;}
-.com_branch_wrap .com_branch{position: relative;}
+.com_branch_wrap2 .com_branch{padding: 112px 0 117px;  border-top: 2px solid #0f0f0f;}
+.com_branch_wrap .com_branch{ padding: 158px 0 117px; position: relative;}
 .com_branch_wrap .com_branch .com_tit{margin-bottom: 76px;}
 .com_branch_wrap .com_branch .com_tit h3{font-size: 70px; font-family: 'Constantia'; color: #0e0e0e; font-weight: 400; letter-spacing: -1px;} 
 .com_branch_wrap .com_branch .com_tit span{font-weight: 500; font-size: 17px; color: #0f0f0f;}
@@ -51,7 +50,7 @@ em.view:hover span::before{width: 0;}
 .com_branch_wrap .branch_wrap .branch_right .info .info_right .info_box_right p{margin-bottom: 4px; color: #3f4241;}
 .com_branch_wrap .branch_wrap .branch_right .info .info_right .info_box_right p:last-child{margin-bottom: 0;}
 .com_branch_wrap .branch_wrap .branch_right .info .info_right .info_box_left{width: 136px; color: #3f4241;}
-.com_branch_wrap .find_btn{position: absolute; top:72px; right:0; padding:0 28px 0 35px; display: flex; align-items: center; min-width: 263px; height: 53px; border-radius: 50px; font-size: 22px; color: #fff; background-color: #009f93; font-weight: 700; letter-spacing: -1px;}
+.com_branch_wrap .find_btn{position: absolute; top:198px; right:60px; padding:0 28px 0 35px; display: flex; align-items: center; min-width: 263px; height: 53px; border-radius: 50px; font-size: 22px; color: #fff; background-color: #009f93; font-weight: 700; letter-spacing: -1px;}
 .com_branch_wrap .find_btn span{position: relative; padding-right: 28px;}
 .com_branch_wrap .find_btn span::after{content: ''; position: absolute; top: 12px; right:0; padding: 12px 21px 0 0; background: url(../images/com_icon2.png)no-repeat;}
 .com_branch_wrap .find_btn:hover span::after{animation: effect .3s alternate infinite ease-in;}
