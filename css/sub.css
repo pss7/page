@@ -65,6 +65,38 @@ main{overflow-x: hidden;}
 .com_layout_list li h4{margin-bottom: 35px; font-size: 33px; color: #1f1f1f;}
 .com_layout_list li p{font-weight: 500; color:#0e0e0e; line-height: 1.7; letter-spacing: -2px;}
 
+/* rayout3 */
+.com_rayout_box2{margin-top: 172px; padding: 0 0 152px; position: relative; display: flex; gap: 0 59px; align-items: center; border-bottom: 1px solid #0f0f0f;}
+.com_rayout_box2 .video_list_wrap{position: relative;}
+.com_rayout_box2 .video_list_wrap .control{position: absolute; right:10px; top: 50%; transform: translateY(-50%);}
+.com_rayout_box2 .com_rayout_left{width: 707px;}
+.com_rayout_box2 .com_rayout_left .video{width: 707px; height: 399px; overflow: hidden;}
+.com_rayout_box2 .com_rayout_left h3{margin-bottom: 54px; font-size: 33px; font-weight: 700; color: #0f0f0f; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.com_rayout_box2 .com_rayout_right{width: 714px; padding-top: 105px;}
+.com_rayout_box2 .com_rayout_right .video_list{height: 399px; padding: 9px 11px 9px 9px; border: 1px solid #c4c4c4; border-width: 1px 0;}
+.com_rayout_box2 .com_rayout_right .video_list li{margin-bottom: 10px;}
+.com_rayout_box2 .com_rayout_right .video_list li.slick-current .hover_effect_box{border: 6px solid #3db6ad;}
+.com_rayout_box2 .com_rayout_right .video_list li.slick-current a:hover .hover_effect span{display: none;}
+.com_rayout_box2 .com_rayout_right .video_list li a{padding-right: 96px; display: flex; gap: 0 30px; align-items: center;}
+.com_rayout_box2 .com_rayout_right .video_list li a .video{position: relative; width: 210px; height: 120px; flex-shrink: 0; overflow: hidden;}
+.com_rayout_box2 .com_rayout_right .video_list li h3{font-size: 22px; color: #272727; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.com_rayout_box2 img{display: block;}
+.com_rayout_box2 .view{position: absolute; top:28px; right:0;}
+
+/* effect */
+.hover_effect{position: absolute; top:0; left:0; right:0; bottom: 0;}
+.hover_effect span{display: block; position: absolute; background: #3db6ad; transition: all .5s; z-index: 2;}
+.hover_effect span:nth-child(1){top:0; height: 6px; width: 0;}
+.hover_effect span:nth-child(2){top:0; right:0; width: 6px; height: 0;}
+.hover_effect span:nth-child(3){bottom: 0; right: 0; height: 6px; width: 0;}
+.hover_effect span:nth-child(4){bottom: 0; left:0; width: 6px; height: 0;}
+.hover_effect_wrap .hover_effect_box{position: relative;}
+.hover_effect_wrap:hover{border: 0;}
+.hover_effect_wrap:hover .hover_effect span:nth-child(1){width: 100%;}
+.hover_effect_wrap:hover .hover_effect span:nth-child(2){height: 100%;}
+.hover_effect_wrap:hover .hover_effect span:nth-child(3){width: 100%;}
+.hover_effect_wrap:hover .hover_effect span:nth-child(4){height: 100%;}
+
 /* sub_tit */
 .sub_tit{position: relative;}
 .sub_tit .sub_img{position: relative; height: 955px; overflow: hidden;}
@@ -79,6 +111,9 @@ main{overflow-x: hidden;}
 .sub_tit.st .sub_text_box{top:74px;}
 .sub_tit.st .sub_text_box h2{font-weight: 700; font-size: 40px; color: #fff;}
 .sub_tit.st .sub_text_box em{margin-bottom: 14px;}
+
+.sub_tit.st2 .sub_img{height: 534px;}
+.sub_tit.st2 .sub_text_box{top: 183px;}
 
 .com_top_st{margin-bottom: 87px; display: flex; gap: 0 108px; align-items: center; justify-content: center;}
 .com_top_st h3{position: relative; font-size: 22px; color: #019b8d; font-weight: 700;}
@@ -640,7 +675,10 @@ select{border-radius:0; }
 .news_box .com_table1 tbody tr td.text1{padding-left: 54px; text-align: left;}
 .news_box .com_table1 tbody tr td.text1 span{margin-right: 16px; color: #009f93;}
 
-/* 생기 언론 보도 */
+/* 생기 저널 */
+.com_list_wrap.st li .text.st h3{margin-bottom: 18px;}
+.com_list_wrap.st li .text.st p{margin-bottom: 24px; color: #0f0f0f; text-align: left; display: -webkit-box; -webkit-line-clamp: 2;  -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;}
+.com_list_wrap.st li .text.st span{display: block; text-align: left; font-weight: 700; font-size: 18px; color: #009f93;}
 
 
 
