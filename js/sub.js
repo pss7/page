@@ -29,7 +29,34 @@ $(function () {
         return false;
     });
 
+    /* 생기언론보도 */
+    $('.sidewalk_content').hide();
+    $('.sidewalk_content').first().show();
+    $('.sidewalk_box .com_tab2 li').click(function () {
+        $('.sidewalk_box .com_tab2 li').children().removeClass('active');
+        $(this).children().addClass('active');
+        var Idx = $(this).index();
+        $('.sidewalk_content').hide();
+        $('.sidewalk_content').eq(Idx).show();
+        return false;
+    });
 
+    /* 공통 */
+    $('.com_rayout_box2 .slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: $('.com_rayout_box2 .control .prev'),
+        nextArrow: $('.com_rayout_box2 .control .next'),
+        asNavFor: '.slider-nav',
+    });
+    $('.com_rayout_box2 .slider-nav').slick({
+        arrows: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.slider-for',
+        vertical: true,
+        focusOnSelect: true,
+    });
 
 
 });
