@@ -1,5 +1,6 @@
 $(function () {
 
+    /* 공통 */
     $('.com_review_wrap .slick').slick({
         arrows: true,
         accessibility: false,
@@ -9,6 +10,16 @@ $(function () {
         nextArrow: $('.com_review_wrap .control .next'),
         autoplaySpeed: 5000,
         speed: 500,
+    });
+
+    /* 공통 */
+    $('.com_slick_wrap .slick').slick({
+        autoplay:true,
+        variableWidth: true,
+        arrows: false,
+        centerMode: true,
+        autoplaySpeed: 2000,
+        speed: 700,
     });
 
     $('.reservation_box .time_lsit li a').click(function () {
@@ -48,14 +59,18 @@ $(function () {
         prevArrow: $('.com_rayout_box2 .control .prev'),
         nextArrow: $('.com_rayout_box2 .control .next'),
         asNavFor: '.slider-nav',
+        infinite: true,
     });
     $('.com_rayout_box2 .slider-nav').slick({
         arrows: false,
-        slidesToShow: 3,
         slidesToScroll: 1,
         asNavFor: '.slider-for',
+        infinite: true,
         vertical: true,
         focusOnSelect: true,
+    });
+    $('.com_rayout_box2 .video_list li').click(function () {
+        return false;
     });
 
 
