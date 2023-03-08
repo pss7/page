@@ -12,6 +12,16 @@ main{overflow-x: hidden;}
 .sub_count p{font-size: 28px; color: #2d2d2d; font-family: 'Constantia';  letter-spacing: -1px; }
 .sub_count p em{font-size: 128px; line-height: 1;}
 
+.com_img_effect img{transform:scale(1.2); transition:all 3.5s;}
+.com_img_effect.active img{transform:scale(1);}
+
+@keyframes com_effect1{
+
+    0%{opacity: 0; transform: translateY(35px);}
+    100%{opacity: 1; transform: translateY(0);}
+
+}
+
 .com_tit_box1{margin-bottom: 45px; }
 .com_tit_box1 h3.st{position: relative; margin-bottom: 116px; padding-top: 50px;}
 .com_tit_box1 h3.st::after{content: ''; padding: 202px 165px 0 0;  position: absolute; left: 50%; transform: translateX(-50%); top:0;
@@ -40,10 +50,16 @@ background: url(../images/sub/q.png)no-repeat;  z-index: -1;}
 
 /* rayout */
 .com_rayout_box1{display: flex; gap: 0 415px;}
+.com_rayout_box1 .com_rayout_left{flex-shrink: 0;}
 .com_rayout_box1 .com_rayout_left .com_tit_box2 h3{margin-bottom: 40px; font-size: 32px;}
 .com_rayout_box1 .com_rayout_left .com_tit_box2 em.st{opacity: .15; }
-.com_rayout_box1 .com_rayout_right{flex: 1; position: relative; padding: 176px 0 0;}
-.com_rayout_box1 .com_rayout_right .img{margin-bottom: 41px;}
+.com_rayout_box1 .com_rayout_right{width: 715px; position: relative; padding: 176px 0 0;}
+/*
+.com_rayout_box1 .com_rayout_right .slide.active .img{}
+.com_rayout_box1 .com_rayout_right .slide.active .text h4{}
+.com_rayout_box1 .com_rayout_right .slide.active .text p{}
+*/
+.com_rayout_box1 .com_rayout_right .img{width: 177px; height: 217px; margin-bottom: 41px; overflow: hidden;}
 .com_rayout_box1 .com_rayout_right .img img{display: block;}
 .com_rayout_box1 .com_rayout_right .text h4{margin-bottom: 44px; font-weight: 700; font-size: 33px; color: #fff;}
 .com_rayout_box1 .com_rayout_right .text h4 span{font-family: 'Constantia'; font-size: 25px; color: #fefefe; font-weight: 400;}
@@ -78,13 +94,8 @@ background: url(../images/sub/q.png)no-repeat;  z-index: -1;}
 .com_rayout_box2 .com_rayout_left .video iframe{width: 100%; height: 100%;}
 .com_rayout_box2 .com_rayout_left h3{margin-bottom: 54px; font-size: 33px; font-weight: 700; color: #0f0f0f; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
 .com_rayout_box2 .com_rayout_right{width: 714px; padding-top: 105px;}
-.com_rayout_box2 .com_rayout_right .video_list{}
 .com_rayout_box2 .com_rayout_right .video_list .slick-list{height: 407px!important; padding: 9px 11px 9px 9px; border: 1px solid #c4c4c4; border-width: 1px 0;}
-
-
-
 .com_rayout_box2 .com_rayout_right .video_list li{margin-bottom: 10px;}
-
 .com_rayout_box2 .com_rayout_right .video_list li.slick-current .hover_effect_box{border: 6px solid #3db6ad;}
 .com_rayout_box2 .com_rayout_right .video_list li.slick-current a:hover .hover_effect span{display: none;}
 .com_rayout_box2 .com_rayout_right .video_list li a{padding-right: 96px; display: flex; gap: 0 30px; align-items: center;}
@@ -92,20 +103,6 @@ background: url(../images/sub/q.png)no-repeat;  z-index: -1;}
 .com_rayout_box2 .com_rayout_right .video_list li h3{font-size: 22px; color: #272727; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
 .com_rayout_box2 img{display: block;}
 .com_rayout_box2 .view{position: absolute; top:28px; right:0;}
-
-/* effect */
-.hover_effect{position: absolute; top:0; left:0; right:0; bottom: 0;}
-.hover_effect span{display: block; position: absolute; background: #3db6ad; transition: all .5s; z-index: 2;}
-.hover_effect span:nth-child(1){top:0; height: 6px; width: 0;}
-.hover_effect span:nth-child(2){top:0; right:0; width: 6px; height: 0;}
-.hover_effect span:nth-child(3){bottom: 0; right: 0; height: 6px; width: 0;}
-.hover_effect span:nth-child(4){bottom: 0; left:0; width: 6px; height: 0;}
-.hover_effect_wrap .hover_effect_box{position: relative;}
-.hover_effect_wrap:hover{border: 0;}
-.hover_effect_wrap:hover .hover_effect span:nth-child(1){width: 100%;}
-.hover_effect_wrap:hover .hover_effect span:nth-child(2){height: 100%;}
-.hover_effect_wrap:hover .hover_effect span:nth-child(3){width: 100%;}
-.hover_effect_wrap:hover .hover_effect span:nth-child(4){height: 100%;}
 
 /* sub_tit */
 .sub_tit{position: relative;}
