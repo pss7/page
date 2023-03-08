@@ -14,13 +14,48 @@ $(function () {
 
     /* 공통 */
     $('.com_slick_wrap .slick').slick({
-        autoplay:true,
+        autoplay: true,
         variableWidth: true,
         arrows: false,
         centerMode: true,
         autoplaySpeed: 2000,
         speed: 700,
     });
+
+    /* 공통 */
+    $('.com_rayout_right .slick').slick({
+        arrows: true,
+        slidesToShow: 1,
+        prevArrow: $('.com_rayout_right .control .prev'),
+        nextArrow: $('.com_rayout_right .control .next'),
+        autoplaySpeed: 5000,
+        fade: true,
+        speed: 500,
+    });
+    /*
+    $('.com_rayout_right .slick').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+    });
+    $('.com_rayout_right .slick').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+    });
+    */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     $('.reservation_box .time_lsit li a').click(function () {
         $('.reservation_box .time_lsit li a').removeClass('active');

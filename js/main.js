@@ -3,21 +3,22 @@ $(function () {
     /* section1 */
     $('#section1 .slick').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
         $('#section1 .main_text_box').removeClass('active').fadeOut();
+
         $('#section1 .count').fadeOut(200);
     });
-    $('#section1 .slick').on('afterChange init', function (event, slick, currentSlide, nextSlide) {
+    $('#section1 .slick').on('afterChange', function (event, slick, currentSlide, nextSlide) {
         $('#section1 .main_text_box').addClass('active').fadeIn();
         $('#section1 .count').fadeIn(200);
     });
-    /*
-        var $slick_carousel = $('#section1 .slick');
-        $slick_carousel.on('init', function (event, slick) {
-            $slick_carousel.find('.slick-current').removeClass('slick-active');
-            setTimeout(function () {
-                $slick_carousel.find('.slick-current').addClass('slick-active');
-            }, 100);
-        });
-        */
+
+    var $slick_carousel = $('#section1 .slick');
+    $slick_carousel.on('init', function (event, slick) {
+        $slick_carousel.find('.slick-current').removeClass('slick-active');
+        setTimeout(function () {
+            $slick_carousel.find('.slick-current').addClass('slick-active');
+        }, 100);
+    });
+
     $('#section1 .slick').on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
         var i = (currentSlide ? currentSlide : 0) + 1;
         $('#section1 .count').html('<em>' + i + '</em> ' + slick.slideCount);
@@ -45,7 +46,7 @@ $(function () {
         $(this).children().addClass('active');
         var Idx = $(this).index();
         $('.solution_img').hide();
-        $('.solution_img').eq(Idx).show();
+        $('.solution_img').eq(Idx).stop().fadeIn(800);
     });
 
     /* section5 */
