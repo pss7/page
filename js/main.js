@@ -49,6 +49,14 @@ $(function () {
         $('.solution_img').eq(Idx).stop().fadeIn(800);
     });
 
+    $('#section3').mouseleave(function () {
+        $('#section3 .solution_list li').children().removeClass('active');
+        $('.solution_img').hide();
+        $('.solution_img').first().show();
+    });
+
+
+
     /* section5 */
     $('#section5 .slick').slick({
         autoplay: true,
