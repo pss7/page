@@ -4,6 +4,7 @@
 main{overflow-x: hidden;}
 .com_branch_wrap2{margin-top: 50px;}
 .com_branch_wrap .com_branch{padding-top: 114px;}
+#header{position: static;}
 
 /* 공통 */
 .color{color: #378f90; font-weight: 500; font-size: 20px;}
