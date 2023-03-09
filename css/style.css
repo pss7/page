@@ -132,12 +132,12 @@ em.view:hover span::before{width: 0;}
 #footer .footer_top .inquiry_wrap .inquiry_box .inquiry_text4{width: 197px;}
 #footer .footer_top .inquiry_wrap .inquiry_box .inquiry_text5{width: 429px;}
 #footer .footer_top .inquiry_wrap .footer_hover_wrap::-webkit-scrollbar {width: 8px;}
-#footer .footer_top .inquiry_wrap .footer_hover_wrap::-webkit-scrollbar-thumb {border-radius: 50px; background-color: #aaa;}
-#footer .footer_top .inquiry_wrap .footer_hover_wrap::-webkit-scrollbar-track {margin: 5px 0; background-color: #eee; border-radius: 50px;}
-#footer .footer_top .inquiry_wrap .footer_hover_wrap{display: none; padding: 5px 5px 5px 10px; position: absolute; top:-4px; left: 0; right:-59px; height: 150px; 
-    overflow-y: auto; overflow-x: hidden; background: #fff; border-radius: 5px; box-shadow: 5px 5px 10px rgba(0,0,0, .1); z-index: 3;}
-#footer .footer_top .inquiry_wrap .footer_hover_wrap .inquiry_text{color: #222;font-size: 14px;}
-#footer .footer_top .inquiry_wrap .footer_hover_box{display: flex; margin:5px 0 5px;}
+#footer .footer_top .inquiry_wrap .footer_hover_wrap::-webkit-scrollbar-thumb {border-radius: 50px; background-color: #444343;}
+#footer .footer_top .inquiry_wrap .footer_hover_wrap::-webkit-scrollbar-track {border-radius: 50px ;}
+#footer .footer_top .inquiry_wrap .footer_hover_wrap{display: none;position: absolute; top:0; left: 0; right:60px; height: 150px; 
+    overflow-y: auto; overflow-x: hidden; background: #000; border-radius: 5px; z-index: 3;}
+#footer .footer_top .inquiry_wrap .footer_hover_wrap .inquiry_text{color: #fff;}
+#footer .footer_top .inquiry_wrap .footer_hover_box{display: flex; margin:0 0 6px;}
 #footer .footer_top a{position: absolute; top: 50%; right:60px; transform: translateY(-50%) rotate(90deg); padding: 32px 32px 0 0; background: url(../images/footer_view.png)no-repeat; transition: all .3s;}
 #footer .footer_bottom{padding: 46px 60px 54px 0; display: flex; justify-content: space-between ;}
 #footer .footer_bottom .footer_left .footer_link{margin-bottom: 40px; display: flex; gap: 0 29px;}
