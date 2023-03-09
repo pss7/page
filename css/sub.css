@@ -16,13 +16,6 @@ main{overflow-x: hidden;}
 .com_img_effect img{transform:scale(1.2); transition:all 3.5s;}
 .com_img_effect.active img{transform:scale(1);}
 
-@keyframes com_effect1{
-
-    0%{opacity: 0; transform: translateY(35px);}
-    100%{opacity: 1; transform: translateY(0);}
-
-}
-
 .com_tit_box1{margin-bottom: 45px; }
 .com_tit_box1 h3.st{position: relative; margin-bottom: 116px; padding-top: 50px;}
 .com_tit_box1 h3.st::after{content: ''; padding: 202px 165px 0 0;  position: absolute; left: 50%; transform: translateX(-50%); top:0;
