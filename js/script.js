@@ -24,12 +24,13 @@ $(function () {
     /* footer */
     $('#footer .footer_top a').mouseover(function () {
         $('#footer .footer_hover_wrap').stop().fadeIn(300);
-    });
-    $('#footer .footer_hover_wrap').mouseleave(function () {
-        $('#footer .footer_hover_wrap').stop().fadeOut(300);
+        $('#footer .footer_top a').hide();
     });
 
-    /* footer  */
+    $('#footer .footer_hover_wrap').mouseleave(function () {
+        $('#footer .footer_hover_wrap').stop().fadeOut(300);
+        $('#footer .footer_top a').show();
+    });
     $('#footer .inquiry_wrap .slick').slick({
         autoplay: true,
         arrows: false,
