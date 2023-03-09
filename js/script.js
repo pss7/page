@@ -39,5 +39,15 @@ $(function () {
         autoplaySpeed: 3500,
         speed: 700,
     });
+    $('#footer .site_link > a').click(function () {
+        if ($(this).hasClass('active')) {
+            $('#footer .site_list').slideUp();
+            $(this).removeClass('active');
+        } else {
+            $('#footer .site_list').slideDown();
+            $(this).addClass('active');
+        }
+        return false;
+    });
 
 });
