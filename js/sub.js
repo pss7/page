@@ -39,24 +39,6 @@ $(function () {
     });
     */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     $('.reservation_box .time_lsit li a').click(function () {
         $('.reservation_box .time_lsit li a').removeClass('active');
         $(this).addClass('active');
@@ -108,5 +90,10 @@ $(function () {
         return false;
     });
 
+    const scroll = new LocomotiveScroll({
+        el: document.querySelector('[data-scroll-container]'),
+        smooth: true
+    });
 
 });
+

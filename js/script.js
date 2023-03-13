@@ -1,13 +1,12 @@
 $(function () {
 
+    $('.com_img_effect').addClass('active');
+ 
     /* aos */
     $(window).on('load', function () {
         AOS.init({
             duration: 1700
         });
-
-        $('.com_img_effect').addClass('active');
-
     });
 
     /* header */
