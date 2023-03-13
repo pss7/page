@@ -71,7 +71,8 @@ em.view:hover span::before{width: 0;}
 }
 
 /* header */
-#header{position: absolute; top:0; left:0; right:0; z-index: 9;}
+#header{position: absolute; top:0; left:0; right:0; z-index: 9;  transition: 1s;}
+#header.active{transform: translate3d(0,-100%,0);}
 #header .hedaer_top{padding: 0 72px 0 117px; display: flex; align-items: center; justify-content: space-between; height: 47px; background: #2a2b2c;}
 #header .hedaer_top .hedaer_top_left .hedaer_top_info{position: relative; padding-left: 28px; font-size: 14px; font-weight: 500; color: #fff;}
 #header .hedaer_top .hedaer_top_left .hedaer_top_info::before{content: ''; padding: 16px 17px 0 0; position: absolute; top: 50%; left: 0; transform: translateY(-50%); background: url(../images/hedaer_top_icon1.png)no-repeat;}
