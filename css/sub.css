@@ -115,7 +115,7 @@ background: url(../images/sub/q.png)no-repeat;  z-index: -1;}
 .sub_tit.st .sub_text_box em{margin-bottom: 14px;}
 
 .sub_tit.st2 .sub_img{height: 534px;}
-.sub_tit.st2 .sub_text_box{top: 183px;}
+.sub_tit.st2 .sub_text_box{top: 342px;}
 
 .com_top_st{margin-bottom: 87px; display: flex; gap: 0 108px; align-items: center; justify-content: center;}
 .com_top_st h3{position: relative; font-size: 22px; color: #019b8d; font-weight: 700;}
