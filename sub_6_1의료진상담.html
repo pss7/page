@@ -11,16 +11,17 @@
     <title>의료진상담_서브</title>
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/locomotive-scroll.css">
+    <!--<link rel="stylesheet" href="css/aos.css">-->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/sub.css">
 
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/slick.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="js/jquery.counterup.min.js"></script>
-    <script src="js/aos.js"></script>
+    <!--<script src="js/aos.js"></script>-->
+    <script src="js/locomotive-scroll.js"></script>
 
     <script src="js/script.js"></script>
     <script src="js/sub.js"></script>
@@ -28,7 +29,7 @@
 </head>
 
 <body>
-    <div id="wrap">
+    <div id="wrap" data-scroll-container>
         <header id="header">
             <div class="hedaer_top">
                 <div class="hedaer_top_left">
@@ -588,7 +589,7 @@
                             <div class="com_branch_wrap com_branch_wrap2">
                                 <div class="container">
                                     <div class="com_branch">
-                                        <div class="com_tit">
+                                        <div class="com_tit op_effect" data-scroll>
                                             <h3>
                                                 Branch
                                             </h3>
@@ -597,13 +598,14 @@
                                             </span>
                                         </div>
                                         <!-- //com_tit -->
+
                                         <div class="branch_wrap">
-                                            <div class="branch_left">
+                                            <div class="branch_left op_effect" data-scroll>
                                                 <img src="images/main/map.png" alt="">
                                             </div>
                                             <!-- //branch_left -->
-        
-                                            <div class="branch_right">
+
+                                            <div class="branch_right op_effect" data-scroll>
                                                 <div class="info">
                                                     <div class="info_left">
                                                         <h4>
@@ -621,14 +623,14 @@
                                                         </div>
                                                     </div>
                                                     <!-- //info_left -->
-        
+
                                                     <div class="info_right">
                                                         <div class="info_link">
                                                             <a href="#">자세히 보기</a>
                                                             <a href="#">문의하기</a>
                                                         </div>
                                                         <!-- //info_link -->
-        
+
                                                         <dl class="info_box">
                                                             <dt class="info_box_left">
                                                                 /&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;평&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;일
@@ -638,12 +640,12 @@
                                                                     09:30 - 18:30
                                                                 </p>
                                                                 <p>
-        
+
                                                                     09:30 - 18:00(동절기 1/2/12)
                                                                 </p>
                                                             </dd>
                                                         </dl>
-        
+
                                                         <dl class="info_box">
                                                             <dt class="info_box_left">
                                                                 /&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;토&nbsp;요&nbsp;일
@@ -654,7 +656,7 @@
                                                                 </p>
                                                             </dd>
                                                         </dl>
-        
+
                                                         <dl class="info_box">
                                                             <dt class="info_box_left">
                                                                 /&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;점심시간
@@ -665,7 +667,7 @@
                                                                 </p>
                                                             </dd>
                                                         </dl>
-        
+
                                                         <dl class="info_box">
                                                             <dt class="info_box_left">
                                                                 /&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;휴&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;진
@@ -676,29 +678,29 @@
                                                                 </p>
                                                             </dd>
                                                         </dl>
-        
+
                                                     </div>
                                                     <!-- //info_right -->
-        
+
                                                 </div>
                                                 <!-- //info -->
-        
+
                                             </div>
                                             <!-- //branch_right -->
-        
+
                                         </div>
                                         <!-- //branch_wrap -->
-        
-                                        <a href="#" class="find_btn">
+
+                                        <a href="#" class="find_btn op_effect" data-scroll>
                                             <span>나와 가까운 지점 찾기</span>
                                         </a>
-        
+
                                     </div>
                                     <!-- //com_branch -->
-        
+
                                 </div>
                                 <!-- //container -->
-        
+
                             </div>
                             <!-- //com_branch_wrap -->
 
@@ -722,39 +724,374 @@
                 <div class="container">
                     <div class="footer_top">
                         <h4>
-                            의료진 상담
+                            생기한의원 네트워크
                         </h4>
-                        <div class="inquiry_wrap slick">
-                            <div class="inquiry_box slide">
-                                <div class="inquiry_text inquiry_text1">
-                                    [아토피] 강남점 | 아토피 문의 드립니다.
-                                </div>
-                                <div class="inquiry_text">
-                                    <span class="name">이**</span>
-                                    <span class="date">2022-02-22</span>
-                                    <span class="receipt">답변접수</span>
-                                </div>
-                            </div>
-                            <!-- //inquiry_box-->
 
-                            <div class="inquiry_box slide">
-                                <div class="inquiry_text inquiry_text1">
-                                    [아토피] 강남점 | 아토피 문의 드립니다.
+                        <div class="inquiry_wrap">
+                            <div class="slick">
+                                <div class="slide">
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text1">
+                                            생기한의원 강남점
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text2">
+                                            사업자 등록번호: 214-91-05086
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text3">
+                                            대표자 : 박치영
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text4">
+                                            전화번호 : 02-537-1075
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text5">
+                                            서울시 서초구 서초대로 77길 3 아라타워 14층 1405호
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
                                 </div>
-                                <div class="inquiry_text">
-                                    <span class="name">이**</span>
-                                    <span class="date">2022-02-22</span>
-                                    <span class="receipt">답변접수</span>
+                                <!-- //slide -->
+
+                                <div class="slide">
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text1">
+                                            생기한의원 마포공덕점
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text2">
+                                            사업자등록번호 : 833-97-00206
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text3">
+                                            대표자 : 임현지
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text4">
+                                            전화번호 : 02-714-1005
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text5">
+                                            서울시 마포구 마포대로 68, 5층 506호 마포아크로타워
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
                                 </div>
+                                <!-- //slide -->
+
+                                <div class="slide">
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text1">
+                                            생기한의원 부산센텀점
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text2">
+                                            사업자등록번호 :208-91-05849
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text3">
+                                            대표자 : 임현지
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text4">
+                                            전화번호 : 051-714-3112
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text5">
+                                            부산해운대구 우동 1505 센텀호텔 2층 201호
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                </div>
+                                <!-- //slide -->
+
                             </div>
-                            <!-- //inquiry_box-->
+                            <!-- //slick -->
+
+                            <div class="footer_hover_wrap">
+                                <div class="footer_hover_box">
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text1">
+                                            생기한의원 강남점
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text2">
+                                            사업자등록번호 : 214-91-05086
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text3">
+                                            대표자 : 박치영
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text4">
+                                            전화번호 : 02-537-1075
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text5">
+                                            서울시 서초구 서초대로 77길 3 아라타워 14층 1405호
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                </div>
+                                <!-- //footer_hover_box -->
+
+                                <div class="footer_hover_box">
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text1">
+                                            생기한의원 마포공덕점
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text2">
+                                            사업자등록번호 : 833-97-00206
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text3">
+                                            대표자 : 임현지
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text4">
+                                            전화번호 : 02-714-1005
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text5">
+                                            서울시 마포구 마포대로 68, 5층 506호 마포아크로타워
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                </div>
+                                <!-- //footer_hover_box -->
+
+                                <div class="footer_hover_box">
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text1">
+                                            생기한의원 부산센텀점
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text2">
+                                            사업자등록번호 :208-91-05849
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text3">
+                                            대표자 : 임현지
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text4">
+                                            전화번호 : 051-714-3112
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text5">
+                                            부산해운대구 우동 1505 센텀호텔 2층 201호
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                </div>
+                                <!-- //footer_hover_box -->
+
+                                <div class="footer_hover_box">
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text1">
+                                            생기한의원 강남점
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text2">
+                                            사업자등록번호 : 214-91-05086
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text3">
+                                            대표자 : 박치영
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text4">
+                                            전화번호 : 02-537-1075
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text5">
+                                            서울시 서초구 서초대로 77길 3 아라타워 14층 1405호
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                </div>
+                                <!-- //footer_hover_box -->
+
+                                <div class="footer_hover_box">
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text1">
+                                            생기한의원 마포공덕점
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text2">
+                                            사업자등록번호 : 833-97-00206
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text3">
+                                            대표자 : 임현지
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text4">
+                                            전화번호 : 02-714-1005
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text5">
+                                            서울시 마포구 마포대로 68, 5층 506호 마포아크로타워
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                </div>
+                                <!-- //footer_hover_box -->
+
+                                <div class="footer_hover_box">
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text1">
+                                            생기한의원 부산센텀점
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text2">
+                                            사업자등록번호 : 208-91-05849
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text3">
+                                            대표자 : 임현지
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text4">
+                                            전화번호 : 051-714-3112
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                    <div class="inquiry_box">
+                                        <div class="inquiry_text inquiry_text5">
+                                            부산해운대구 우동 1505 센텀호텔 2층 201호
+                                        </div>
+                                    </div>
+                                    <!-- //inquiry_box-->
+
+                                </div>
+                                <!-- //footer_hover_box -->
+
+                            </div>
+                            <!-- //footer_hover_wrap -->
 
                         </div>
                         <!-- //inquiry_wrap -->
 
                         <a href="#" class="footer_view">
                             <span class="blind">
-                                의료진 상담 더보기
+                                생기한의원 지점 정보 보기
                             </span>
                         </a>
 
