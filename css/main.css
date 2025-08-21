@@ -2326,7 +2326,7 @@ input[type="radio"]:checked + label .radio_ck::after{
   .financial_info_box .box01 .list li{flex: none; width: 49%;}
   .financial_info_box .box01 .list li a{border-radius: 0 0 30px 0;}
 
-  .financial_info_box .tab_chart_content .lnfo_list li{padding: 40px 20px;}
+  .financial_info_box .tab_chart_content .lnfo_list li{padding: 40px 20px 30px;}
   .financial_info_box .tab_chart_content .lnfo_list li h6{font-size: 20px;}
   .financial_info_box .tab_chart_content .lnfo_list li .number{font-size: 26px;}
   .financial_info_box .tab_chart_content .lnfo_list li .text_layout_box{width: 130px; height: 130px;}
