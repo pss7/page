@@ -2275,26 +2275,27 @@ input[type="radio"]:checked + label .radio_ck::after{
 .financial_info_box .bar_chart_box .bar_chart{width: 47.5%;}
 .financial_info_box .line_chart_box{margin-bottom: 55px;}
 .financial_info_box .tab_chart_box .btn_box{display: flex;}
-.financial_info_box .tab_chart_box .btn_box .btn{height: 50px; line-height: 50px; width: 50%; border-radius: 10px 10px 0 0; background-color: #ededed; font-weight: 50;} 
-.financial_info_box .tab_chart_box .btn_box .btn.active{background-color: #003f7d; color: #fff; font-weight: 700;}
+.financial_info_box .tab_chart_box .btn_box .btn{height: 50px; line-height: 50px; width: 50%; border-radius: 10px 10px 0 0; background-color: #ededed; font-weight: 50; transition: all .3s;} 
+.financial_info_box .tab_chart_box .btn_box .btn.active{background-color: #003f7d; color: #fff; font-weight: 700; }
+.financial_info_box .tab_chart_box .btn_box .btn:hover{background-color: #003f7d; color: #fff; font-weight: 700;}
 .financial_info_box .sub_title_box{ padding: 10px 20px; margin: 40px 0 30px; display: flex; align-items: center; justify-content: space-between; background: #f3f3f3; border-radius: 7px;}
 .financial_info_box .sub_title_box .sub_title{ font-size: 20px; font-weight: 700; color: #333;}
 .financial_info_box .sub_title_box em,
 .financial_info_box .sub_title_box span{font-size: 16px; color: #332f2f; font-weight: 700; font-size: 14px;}
-.financial_info_box .tab_chart_conten02 .lnfo_list{display: flex; gap: 20px 2%;}
-.financial_info_box .tab_chart_conten02 .lnfo_list li{text-align: center; background: linear-gradient(to bottom, #66a3ff, #003f7d);}
-.financial_info_box .tab_chart_conten02 .lnfo_list li{padding: 50px 20px; width: 49%; box-shadow: 0 0 15px rgba(0,0,0,.2); border-radius: 10px;}
-.financial_info_box .tab_chart_conten02 .lnfo_list li h6{margin-bottom: 0; font-size: 26px; color: #fff;}
-.financial_info_box .tab_chart_conten02 .lnfo_list li .number{margin-bottom: 15px; display: block; font-size: 40px; font-weight: 700; color: #fff;}
-.financial_info_box .tab_chart_conten02 .lnfo_list li .text_layout_box{width: 150px; height: 150px; margin: 0 auto 30px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 5px 0; background-color: #003f7d; border-radius: 50%;}
-.financial_info_box .tab_chart_conten02 .lnfo_list li .text_layout_box em,
-.financial_info_box .tab_chart_conten02 .lnfo_list li .text_layout_box strong{color: #fff; font-weight: 700;}
-.financial_info_box .tab_chart_conten02 .lnfo_list li .text_layout_box em{font-size: 22px;}
-.financial_info_box .tab_chart_conten02 .lnfo_list li .text_layout_box strong{font-size: 18px;}
-.financial_info_box .tab_chart_conten02 .lnfo_list li .percent_wrap{display: flex; justify-content: space-between; align-items: center; gap: 0 10px;}
-.financial_info_box .tab_chart_conten02 .lnfo_list li .percent_wrap .percent_box{height: 10px; width: 100%; border-radius: 10px; background-color: #ddd;}
-.financial_info_box .tab_chart_conten02 .lnfo_list li .percent_wrap .percent_box span{display: block; width: 20%; height: 100%; background-color: #66a3ff; border-radius: 10px;}
-.financial_info_box .tab_chart_conten02 .lnfo_list li .percent_wrap em{margin-top: -3px; flex-shrink: 0; font-weight: 700; color: #fff;}
+.financial_info_box .tab_chart_content .lnfo_list{display: flex; flex-wrap: wrap; gap: 20px 2%;}
+.financial_info_box .tab_chart_content .lnfo_list li{text-align: center; background: linear-gradient(to bottom, #66a3ff, #003f7d);}
+.financial_info_box .tab_chart_content .lnfo_list li{padding: 50px 20px; width: 49%; box-shadow: 0 0 15px rgba(0,0,0,.2); border-radius: 10px;}
+.financial_info_box .tab_chart_content .lnfo_list li h6{margin-bottom: 0; font-size: 26px; color: #fff;}
+.financial_info_box .tab_chart_content .lnfo_list li .number{margin-bottom: 15px; display: block; font-size: 40px; font-weight: 700; color: #fff;}
+.financial_info_box .tab_chart_content .lnfo_list li .text_layout_box{width: 150px; height: 150px; margin: 0 auto 30px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 5px 0; background-color: #003f7d; border-radius: 50%;}
+.financial_info_box .tab_chart_content .lnfo_list li .text_layout_box em,
+.financial_info_box .tab_chart_content .lnfo_list li .text_layout_box strong{color: #fff; font-weight: 700;}
+.financial_info_box .tab_chart_content .lnfo_list li .text_layout_box em{font-size: 22px;}
+.financial_info_box .tab_chart_content .lnfo_list li .text_layout_box strong{font-size: 18px;}
+.financial_info_box .tab_chart_content .lnfo_list li .percent_wrap{display: flex; justify-content: space-between; align-items: center; gap: 0 10px;}
+.financial_info_box .tab_chart_content .lnfo_list li .percent_wrap .percent_box{height: 10px; width: 100%; border-radius: 10px; background-color: #ddd;}
+.financial_info_box .tab_chart_content .lnfo_list li .percent_wrap .percent_box span{display: block; width: 20%; height: 100%; background-color: #66a3ff; border-radius: 10px;}
+.financial_info_box .tab_chart_content .lnfo_list li .percent_wrap em{margin-top: -3px; flex-shrink: 0; font-weight: 700; color: #fff;}
 
 @media (max-width: 1199px){
 
@@ -2302,9 +2303,9 @@ input[type="radio"]:checked + label .radio_ck::after{
   .financial_info_box .box01 .list li a h6{font-size: 18px;}
   .financial_info_box .box01 .list li a{border-radius: 0 0 60px 0;}
 
-  .financial_info_box .tab_chart_conten02 .lnfo_list li h6{font-size: 22px;}
-  .financial_info_box .tab_chart_conten02 .lnfo_list li .number{font-size: 30px;}
-  .financial_info_box .tab_chart_conten02 .lnfo_list li .text_layout_box em{font-size: 20px;}
+  .financial_info_box .tab_chart_content .lnfo_list li h6{font-size: 22px;}
+  .financial_info_box .tab_chart_content .lnfo_list li .number{font-size: 30px;}
+  .financial_info_box .tab_chart_content .lnfo_list li .text_layout_box em{font-size: 20px;}
 
   .financial_info_box .sub_title_box .sub_title{font-size: 18px;}
 
@@ -2325,10 +2326,10 @@ input[type="radio"]:checked + label .radio_ck::after{
   .financial_info_box .box01 .list li{flex: none; width: 49%;}
   .financial_info_box .box01 .list li a{border-radius: 0 0 30px 0;}
 
-  .financial_info_box .tab_chart_conten02 .lnfo_list li{padding: 40px 20px;}
-  .financial_info_box .tab_chart_conten02 .lnfo_list li h6{font-size: 20px;}
-  .financial_info_box .tab_chart_conten02 .lnfo_list li .number{font-size: 26px;}
-  .financial_info_box .tab_chart_conten02 .lnfo_list li .text_layout_box{width: 130px; height: 130px;}
+  .financial_info_box .tab_chart_content .lnfo_list li{padding: 40px 20px;}
+  .financial_info_box .tab_chart_content .lnfo_list li h6{font-size: 20px;}
+  .financial_info_box .tab_chart_content .lnfo_list li .number{font-size: 26px;}
+  .financial_info_box .tab_chart_content .lnfo_list li .text_layout_box{width: 130px; height: 130px;}
  .financial_info_box .sub_title_box .sub_title{font-size: 16px;}
 
 }
@@ -2338,12 +2339,11 @@ input[type="radio"]:checked + label .radio_ck::after{
   .financial_info_box .box01 .list{margin-bottom: 50px;}
   .financial_info_box .box01 .list li{width: 100%;}
   .financial_info_box .box01 .list li a{padding: 110px 10px 18px; height: auto; border-radius: 20px;}
-  .financial_info_box .tab_chart_conten02 .lnfo_list{flex-wrap: wrap; gap: 30px 0;}
-  .financial_info_box .tab_chart_conten02 .lnfo_list li{padding: 30px 20px; width: 100%;}
-  .financial_info_box .tab_chart_conten02 .lnfo_list li h6{font-size: 18px;}
-  .financial_info_box .tab_chart_conten02 .lnfo_list li .number{font-size: 22px;}
-  .financial_info_box .tab_chart_conten02 .lnfo_list li .percent_wrap em{margin: 0; font-size: 14px;}
-  .financial_info_box .tab_chart_conten02 .lnfo_list li .text_layout_box em{font-size: 16px;}
-  .financial_info_box .tab_chart_conten02 .lnfo_list li .text_layout_box strong{font-size: 16px;}
+  .financial_info_box .tab_chart_content .lnfo_list li{padding: 30px 20px; width: 100%;}
+  .financial_info_box .tab_chart_content .lnfo_list li h6{font-size: 18px;}
+  .financial_info_box .tab_chart_content .lnfo_list li .number{font-size: 22px;}
+  .financial_info_box .tab_chart_content .lnfo_list li .percent_wrap em{margin: 0; font-size: 14px;}
+  .financial_info_box .tab_chart_content .lnfo_list li .text_layout_box em{font-size: 16px;}
+  .financial_info_box .tab_chart_content .lnfo_list li .text_layout_box strong{font-size: 16px;}
 
 }
