@@ -2264,7 +2264,7 @@ input[type="radio"]:checked + label .radio_ck::after{
 .financial_info_box .box01 .list li a::before{content: ''; position: absolute; top:0; left: 50%; transform: translateX(-50%); background-size: contain!important;}
 .financial_info_box .box01 .list li:nth-child(1) a::before{top: 20px; width: 66px; height: 70px; background: url(../images/main/money_icon01.svg)no-repeat center;}
 .financial_info_box .box01 .list li:nth-child(2) a::before{top: 25px; width: 65px; height: 70px; background: url(../images/main/money_icon02.svg)no-repeat center;}
-.financial_info_box .box01 .list li:nth-child(3) a::before{top: 25px; width: 65px; height: 70px; background: url(../images/main/money_icon04.svg)no-repeat center;}
+.financial_info_box .box01 .list li:nth-child(3) a::before{top: 23px; width: 53px; height: 70px; background: url(../images/main/money_icon04.svg)no-repeat center;}
 .financial_info_box .box01 .list li{flex: 1;}
 .financial_info_box .box01 .list li a h6{font-size: 20px; color: #fff;}
 .financial_info_box .box01 .list li a .textBox span,

@@ -380,17 +380,17 @@
             //예산현황 도넛 차트
             const centerTextPlugin = {
                 id: 'centerText',
-                beforeDraw(chart) {
-                    const { width, height, ctx } = chart;
-                    ctx.save();
+                afterDraw(chart) {
+                    const { ctx, chartArea } = chart;
+                    const centerX = (chartArea.left + chartArea.right) / 2;
+                    const centerY = (chartArea.top + chartArea.bottom) / 2;
 
-                    const centerX = width / 2;
-                    const centerY = height / 2;
+                    ctx.save();
 
                     const lines = ["세출예산", "1,999,999", "백만원"];
 
-                    let fontSize = Math.min(width, height) / 12;
-                    fontSize = Math.max(10, Math.min(fontSize, 30)); //10~30px 사이 제한
+                    let fontSize = Math.min(chart.width, chart.height) / 12;
+                    fontSize = Math.max(10, Math.min(fontSize, 30)); // 10~30px 제한
 
                     const lineHeight = fontSize * 1.4;
 
@@ -402,6 +402,7 @@
                     lines.forEach((line, index) => {
                         ctx.fillText(line, centerX, centerY - lineHeight + index * lineHeight);
                     });
+
                     ctx.restore();
                 }
             };
@@ -410,31 +411,39 @@
                 type: 'doughnut',
                 data: {
                     labels: [
-                        "Africa", "Asia", "Europe", "Latin America", "North America",
-                        "Oceania", "Middle East", "Antarctica", "Caribbean", "Central Asia", "South Asia"
+                        "기타", "일반공공행정", "국토및지역개발", "환경", "교통및물류",
+                        "농림해양수산", "문화및관광", "보건", "공공질서및안전", "예비비", "사회복지"
                     ],
                     datasets: [{
-                        label: "Population (millions)",
+                        label: "분야별 예산 비율",
                         backgroundColor: [
                             "#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850",
                             "#ffcc00", "#00cc99", "#ff9966", "#6699cc", "#9933cc", "#66ccff"
                         ],
-                        data: [2478, 5267, 734, 784, 433, 200, 150, 20, 50, 300, 800]
+                        data: [15, 10, 10, 9, 8, 5, 5, 2, 1, 0, 32]
                     }]
                 },
                 options: {
                     responsive: true,
                     plugins: {
                         legend: {
-                            position: false
+                            position: 'top',
+                            labels: {
+                                padding: 15 
+                            }
                         },
-                        title: {
-                            display: false,
-                            text: ''
+                        tooltip: {
+                            callbacks: {
+                                label: function (context) {
+                                    const label = context.label || '';
+                                    const value = context.raw;
+                                    return `${label}: ${value}%`;
+                                }
+                            }
                         }
                     }
                 },
-                plugins: [centerTextPlugin]
+                plugins: [centerTextPlugin] // 필요 시 이 플러그인은 별도로 정의되어 있어야 작동
             });
 
             //예산액 추이 라인 차트
