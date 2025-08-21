@@ -171,6 +171,17 @@
                                     예산액 추이 및 세입/세출 예산
                                 </h5>
                                 <div class="box chart_box">
+                                    <div class="sub_title_box">
+                                        <em class="year">
+                                            2025년 기준
+                                        </em>
+                                        <h6 class="sub_title">
+                                            예산액 추이
+                                        </h6>
+                                        <span>
+                                            기준 08.07
+                                        </span>
+                                    </div>
                                     <div class="line_chart_box">
                                         <canvas id="line_chart"></canvas>
                                     </div>
@@ -189,8 +200,8 @@
 
                                         </div>
                                         <div class="tab_chart_content tab_chart_conten02">
-                                            <div class="download_btn_box">
-                                                <button class="download_btn">
+                                            <div class="sub_title_box">
+                                                <button class="sub_title">
                                                     분야별 예산현액
                                                 </button>
                                                 <span>
@@ -443,15 +454,6 @@
             options: {
                 plugins: {
                     legend: { display: false },
-                    title: {
-                        display: true,
-                        color: '#000',
-                        font: {
-                            size: 18,
-                            weight: 'bold',
-                        },
-                        text: '예산액 추이'
-                    }
                 }
             }
         });
