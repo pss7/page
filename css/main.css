@@ -2347,3 +2347,10 @@ input[type="radio"]:checked + label .radio_ck::after{
   .financial_info_box .tab_chart_content .lnfo_list li .text_layout_box strong{font-size: 16px;}
 
 }
+
+@media (max-width: 414px){
+
+  .financial_info_box .sub_title_box em,
+  .financial_info_box .sub_title_box span{font-size: 12px;}
+  
+}
