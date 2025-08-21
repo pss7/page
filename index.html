@@ -88,12 +88,8 @@
 
                     <div class="contents_wrap">
 
-
                         <!-- 재정정보 콘텐츠 -->
-
                         <div class="financial_info_box">
-
-
                             <div class="info_box">
                                 <h5>
                                     예산현황
@@ -149,26 +145,118 @@
                                             </a>
                                         </li>
                                     </ul>
+                                    <div style="max-width: 650px; margin: 0 auto;">
+                                        <canvas id="doughnut_chart"></canvas>
+                                    </div>
+
                                 </div>
                             </div>
 
+                            <div class="info_box">
+                                <h5>
+                                    부서별/분야별 예산 현황
+                                </h5>
+                                <div class="box bar_chart_box">
+                                    <div class="bar_chart">
+                                        <canvas id="bar_chart01"></canvas>
+                                    </div>
+                                    <div class="bar_chart">
+                                        <canvas id="bar_chart02"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="info_box">
+                                <h5>
+                                    예산액 추이 및 세입/세출 예산
+                                </h5>
+                                <div class="box chart_box">
+                                    <div class="line_chart_box">
+                                        <canvas id="line_chart"></canvas>
+                                    </div>
+                                    <div class="tab_chart_box">
+                                        <div class="btn_box">
+                                            <button class="btn">
+                                                세입예산
+                                            </button>
+                                            <button class="btn active">
+                                                세출예산
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="tab_chart_content_box">
+                                        <div class="tab_chart_content">
+
+                                        </div>
+                                        <div class="tab_chart_content tab_chart_conten02">
+                                            <div class="download_btn_box">
+                                                <button class="download_btn">
+                                                    분야별 예산현액
+                                                </button>
+                                                <span>
+                                                    기준 08.07
+                                                </span>
+                                            </div>
+
+                                            <ul class="lnfo_list">
+                                                <li>
+                                                    <h6>
+                                                        사회복지
+                                                    </h6>
+                                                    <span class="number counter">
+                                                        621,215
+                                                    </span>
+                                                    <div class="text_layout_box">
+                                                        <em>집행액</em>
+                                                        <strong>147,422</strong>
+                                                    </div>
+                                                    <div class="percent_wrap">
+                                                        <div class="percent_box">
+                                                            <span></span>
+                                                        </div>
+                                                        <em>
+                                                            20%
+                                                        </em>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <h6>
+                                                        사회복지
+                                                    </h6>
+                                                    <span class="number counter">
+                                                        621,215
+                                                    </span>
+                                                    <div class="text_layout_box">
+                                                        <em>집행액</em>
+                                                        <strong>147,422</strong>
+                                                    </div>
+                                                    <div class="percent_wrap">
+                                                        <div class="percent_box">
+                                                            <span></span>
+                                                        </div>
+                                                        <em>
+                                                            20%
+                                                        </em>
+                                                    </div>
+                                                </li>
+                                            </ul>
 
 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
-
                         <!-- //재정정보 콘텐츠 -->
 
 
 
+
+
+
+
                     </div>
-
-
-
-
-
-
-
                 </div>
             </div>
         </div>
@@ -177,6 +265,198 @@
     </div>
     <!-- //wrap -->
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.counterup@2.1.0/jquery.counterup.min.js"></script>
+
+    <script>
+        $(function () {
+            $('.counter').counterUp({
+                delay: 10,
+                time: 1000
+            });
+        });
+    </script>
+
+    <!-- 예산현황 도넛 차트 -->
+    <script>
+
+        const centerTextPlugin = {
+            id: 'centerText',
+            beforeDraw(chart) {
+                const { width, height, ctx } = chart;
+                ctx.save();
+
+                const centerX = width / 2;
+                const centerY = height / 2;
+
+                const lines = ["세출예산", "1,999,999", "백만원"];
+
+                let fontSize = Math.min(width, height) / 12;
+                fontSize = Math.max(10, Math.min(fontSize, 30)); //10~30px 사이 제한
+
+                const lineHeight = fontSize * 1.4;
+
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillStyle = '#003f7d';
+                ctx.font = `700 ${fontSize}px sans-serif`;
+
+                lines.forEach((line, index) => {
+                    ctx.fillText(line, centerX, centerY - lineHeight + index * lineHeight);
+                });
+                ctx.restore();
+            }
+        };
+
+        new Chart(document.getElementById("doughnut_chart"), {
+            type: 'doughnut',
+            data: {
+                labels: [
+                    "Africa", "Asia", "Europe", "Latin America", "North America",
+                    "Oceania", "Middle East", "Antarctica", "Caribbean", "Central Asia", "South Asia"
+                ],
+                datasets: [{
+                    label: "Population (millions)",
+                    backgroundColor: [
+                        "#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850",
+                        "#ffcc00", "#00cc99", "#ff9966", "#6699cc", "#9933cc", "#66ccff"
+                    ],
+                    data: [2478, 5267, 734, 784, 433, 200, 150, 20, 50, 300, 800]
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: false
+                    },
+                    title: {
+                        display: false,
+                        text: ''
+                    }
+                }
+            },
+            plugins: [centerTextPlugin]
+        });
+    </script>
+    <!-- 예산현황 도넛 차트 -->
+
+    <!-- 부서별/분야별 예산 현황 바 차트 -->
+    <script>
+        new Chart(document.getElementById("bar_chart01"), {
+            type: 'bar',
+            data: {
+                labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
+                datasets: [
+                    {
+                        label: "Population (millions)",
+                        backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850"],
+                        data: [2478, 5267, 734, 784, 433]
+                    }
+                ]
+            },
+            options: {
+                indexAxis: 'y',
+                plugins: {
+                    legend: { display: false },
+                    title: {
+                        display: true,
+                        color: '#000',
+                        font: {
+                            size: 18,
+                            weight: 'bold',
+                        },
+                        text: '부서별 예산 현황'
+                    }
+                }
+            }
+        });
+    </script>
+
+    <script>
+        new Chart(document.getElementById("bar_chart02"), {
+            type: 'bar',
+            data: {
+                labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
+                datasets: [
+                    {
+                        label: "Population (millions)",
+                        backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850"],
+                        data: [2478, 5267, 734, 784, 433]
+                    }
+                ]
+            },
+            options: {
+                indexAxis: 'y',
+                plugins: {
+                    legend: { display: false },
+                    title: {
+                        display: true,
+                        color: '#000',
+                        font: {
+                            size: 18,
+                            weight: 'bold',
+                        },
+                        text: '분야별 예산 현황'
+                    }
+                }
+            }
+        });
+    </script>
+    <!-- 부서별/분야별 예산 현황 바 차트 -->
+
+    <!--예산액 추이 라인 차트 -->
+    <script>
+        new Chart(document.getElementById("line_chart"), {
+            type: 'line',
+            data: {
+                labels: [1500, 1600, 1700, 1750, 1800, 1850, 1900, 1950, 1999, 2050],
+                datasets: [{
+                    data: [86, 114, 106, 106, 107, 111, 133, 221, 783, 2478],
+                    label: "Africa",
+                    borderColor: "#3e95cd",
+                    fill: false
+                }, {
+                    data: [282, 350, 411, 502, 635, 809, 947, 1402, 3700, 5267],
+                    label: "Asia",
+                    borderColor: "#8e5ea2",
+                    fill: false
+                }, {
+                    data: [168, 170, 178, 190, 203, 276, 408, 547, 675, 734],
+                    label: "Europe",
+                    borderColor: "#3cba9f",
+                    fill: false
+                }, {
+                    data: [40, 20, 10, 16, 24, 38, 74, 167, 508, 784],
+                    label: "Latin America",
+                    borderColor: "#e8c3b9",
+                    fill: false
+                }, {
+                    data: [6, 3, 2, 2, 7, 26, 82, 172, 312, 433],
+                    label: "North America",
+                    borderColor: "#c45850",
+                    fill: false
+                }
+                ]
+            },
+            options: {
+                plugins: {
+                    legend: { display: false },
+                    title: {
+                        display: true,
+                        color: '#000',
+                        font: {
+                            size: 18,
+                            weight: 'bold',
+                        },
+                        text: '예산액 추이'
+                    }
+                }
+            }
+        });
+    </script>
+    <!--예산액 추이 라인 차트 -->
 
 
 </body>
