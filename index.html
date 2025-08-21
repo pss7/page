@@ -197,93 +197,45 @@
                                         <div class="tab_chart_content tab_chart_content01">
                                             <div class="sub_title_box">
                                                 <button class="sub_title">
-                                                    분야별 예산현액
+                                                    회계별 예산액
                                                 </button>
                                                 <span>
-                                                    기준 08.07
+                                                    기준 08.20
                                                 </span>
                                             </div>
 
                                             <ul class="lnfo_list">
                                                 <li>
                                                     <h6>
-                                                        사회복지
+                                                        합계
                                                     </h6>
                                                     <span class="number counter">
-                                                        621,215
+                                                        1,623,234
                                                     </span>
-                                                    <div class="text_layout_box">
-                                                        <em>집행액</em>
-                                                        <strong>147,422</strong>
-                                                    </div>
-                                                    <div class="percent_wrap">
-                                                        <div class="percent_box">
-                                                            <span></span>
-                                                        </div>
-                                                        <em>
-                                                            20%
-                                                        </em>
-                                                    </div>
                                                 </li>
                                                 <li>
                                                     <h6>
-                                                        기타
+                                                        일반회계
                                                     </h6>
                                                     <span class="number counter">
-                                                        293,875
+                                                        1,418,272
                                                     </span>
-                                                    <div class="text_layout_box">
-                                                        <em>집행액</em>
-                                                        <strong>245,519</strong>
-                                                    </div>
-                                                    <div class="percent_wrap">
-                                                        <div class="percent_box">
-                                                            <span></span>
-                                                        </div>
-                                                        <em>
-                                                            84%
-                                                        </em>
-                                                    </div>
                                                 </li>
                                                 <li>
                                                     <h6>
-                                                        일반공정행정
+                                                        공기업특별회계
                                                     </h6>
                                                     <span class="number counter">
-                                                        202,083
+                                                        157,764
                                                     </span>
-                                                    <div class="text_layout_box">
-                                                        <em>집행액</em>
-                                                        <strong>58,869</strong>
-                                                    </div>
-                                                    <div class="percent_wrap">
-                                                        <div class="percent_box">
-                                                            <span></span>
-                                                        </div>
-                                                        <em>
-                                                            29%
-                                                        </em>
-                                                    </div>
                                                 </li>
                                                 <li>
                                                     <h6>
-                                                        국토및지역개발
+                                                        기타특별회계
                                                     </h6>
                                                     <span class="number counter">
-                                                        188,897
+                                                        47,204
                                                     </span>
-                                                    <div class="text_layout_box">
-                                                        <em>집행액</em>
-                                                        <strong>29,901</strong>
-                                                    </div>
-                                                    <div class="percent_wrap">
-                                                        <div class="percent_box">
-                                                            <span></span>
-                                                        </div>
-                                                        <em>
-                                                            16%
-                                                        </em>
-                                                    </div>
                                                 </li>
                                             </ul>
                                         </div>
@@ -489,38 +441,48 @@
             new Chart(document.getElementById("line_chart"), {
                 type: 'line',
                 data: {
-                    labels: [1500, 1600, 1700, 1750, 1800, 1850, 1900, 1950, 1999, 2050],
-                    datasets: [{
-                        data: [86, 114, 106, 106, 107, 111, 133, 221, 783, 2478],
-                        label: "Africa",
-                        borderColor: "#3e95cd",
-                        fill: false
-                    }, {
-                        data: [282, 350, 411, 502, 635, 809, 947, 1402, 3700, 5267],
-                        label: "Asia",
-                        borderColor: "#8e5ea2",
-                        fill: false
-                    }, {
-                        data: [168, 170, 178, 190, 203, 276, 408, 547, 675, 734],
-                        label: "Europe",
-                        borderColor: "#3cba9f",
-                        fill: false
-                    }, {
-                        data: [40, 20, 10, 16, 24, 38, 74, 167, 508, 784],
-                        label: "Latin America",
-                        borderColor: "#e8c3b9",
-                        fill: false
-                    }, {
-                        data: [6, 3, 2, 2, 7, 26, 82, 172, 312, 433],
-                        label: "North America",
-                        borderColor: "#c45850",
-                        fill: false
-                    }
+                    labels: [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025],
+                    datasets: [
+                        {
+                            label: "예산액",
+                            data: [
+                                1038979, 1127381, 1306083, 1303997, 1473952,
+                                1597037, 1548764, 1787371, 1798638, 1775755
+                            ],
+                            borderColor: "#3e95cd",
+                            backgroundColor: "#3e95cd",
+                            fill: false,
+                            tension: 0.3,
+                            pointRadius: 4,
+                            pointHoverRadius: 6
+                        }
                     ]
                 },
                 options: {
                     plugins: {
-                        legend: { display: false },
+                        legend: {
+                            display: true,
+                            position: 'top'
+                        },
+
+                    },
+                    scales: {
+                        y: {
+                            min: 1000000,
+                            max: 2000000,
+                            ticks: {
+                                stepSize: 500000,
+                                callback: function (value) {
+                                    return value.toLocaleString(); // 천 단위 콤마 표시
+                                },
+                                color: '#000'
+                            },
+                        },
+                        x: {
+                            ticks: {
+                                color: '#000'
+                            }
+                        }
                     }
                 }
             });
@@ -529,61 +491,122 @@
             new Chart(document.getElementById("bar_chart01"), {
                 type: 'bar',
                 data: {
-                    labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
+                    labels: [
+                        "복지정책과", "고령사회정책과", "아동정책과", "총무과", "기획예산과",
+                        "교통과", "장애인복지과", "자원순환과", "도로과"
+                    ],
                     datasets: [
                         {
-                            label: "Population (millions)",
-                            backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850"],
-                            data: [2478, 5267, 734, 784, 433]
+                            label: "편성액",
+                            backgroundColor: "#3e95cd",
+                            data: [320000, 280000, 150000, 300000, 270000, 230000, 200000, 250000, 260000]
+                        },
+                        {
+                            label: "지출액",
+                            backgroundColor: "#8e5ea2",
+                            data: [300000, 250000, 140000, 290000, 240000, 210000, 180000, 230000, 240000]
                         }
                     ]
                 },
                 options: {
                     indexAxis: 'y',
                     plugins: {
-                        legend: { display: false },
+                        legend: {
+                            display: true,
+                            position: 'top'
+                        },
                         title: {
                             display: true,
                             color: '#000',
                             font: {
                                 size: 18,
-                                weight: 'bold',
+                                weight: 'bold'
                             },
                             text: '부서별 예산 현황'
+                        }
+                    },
+                    scales: {
+                        x: {
+                            min: 0,
+                            max: 400000,
+                            ticks: {
+                                stepSize: 100000,
+                                callback: function (value) {
+                                    return value.toLocaleString(); // 천 단위 콤마
+                                },
+                                color: '#000'
+                            },
+                            title: {
+                                display: true,
+                                text: '금액 (단위: 천원)',
+                                color: '#000',
+                                font: {
+                                    size: 14,
+                                    weight: 'bold'
+                                }
+                            }
                         }
                     }
                 }
             });
 
+
             // 부서별/분야별 예산 현황 바 차트
             new Chart(document.getElementById("bar_chart02"), {
                 type: 'bar',
                 data: {
-                    labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
+                    labels: [
+                        "사회복지", "기타", "일반공공행정", "국토및지역개발", "환경",
+                        "교통및물류", "농림해명수산", "문화및관광", "산업/중소기업및에너지",
+                        "보건", "공공질서및안전", "예비비", "교육"
+                    ],
                     datasets: [
                         {
-                            label: "Population (millions)",
-                            backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850"],
-                            data: [2478, 5267, 734, 784, 433]
+                            label: "편성액",
+                            backgroundColor: "#3e95cd",
+                            data: [150000, 120000, 300000, 250000, 180000, 220000, 160000, 190000, 210000, 170000, 140000, 100000, 200000]
+                        },
+                        {
+                            label: "지출액",
+                            backgroundColor: "#8e5ea2",
+                            data: [130000, 100000, 280000, 230000, 160000, 200000, 150000, 170000, 190000, 150000, 120000, 90000, 180000]
                         }
                     ]
                 },
                 options: {
                     indexAxis: 'y',
                     plugins: {
-                        legend: { display: false },
+                        legend: {
+                            display: true,
+                            position: 'top'
+                        },
                         title: {
                             display: true,
                             color: '#000',
                             font: {
                                 size: 18,
-                                weight: 'bold',
+                                weight: 'bold'
                             },
                             text: '분야별 예산 현황'
+                        }
+                    },
+                    scales: {
+                        x: {
+                            min: 0,
+                            max: 400000,
+                            ticks: {
+                                stepSize: 100000,
+                                callback: function (value) {
+                                    return value.toLocaleString();
+                                },
+                                color: '#000'
+                            },
+
                         }
                     }
                 }
             });
+
 
         })
     </script>

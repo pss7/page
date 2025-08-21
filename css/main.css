@@ -2264,6 +2264,7 @@ input[type="radio"]:checked + label .radio_ck::after{
 .financial_info_box .box01 .list li a::before{content: ''; position: absolute; top:0; left: 50%; transform: translateX(-50%); background-size: contain!important;}
 .financial_info_box .box01 .list li:nth-child(1) a::before{top: 20px; width: 66px; height: 70px; background: url(../images/main/money_icon01.svg)no-repeat center;}
 .financial_info_box .box01 .list li:nth-child(2) a::before{top: 25px; width: 65px; height: 70px; background: url(../images/main/money_icon02.svg)no-repeat center;}
+.financial_info_box .box01 .list li:nth-child(3) a::before{top: 25px; width: 65px; height: 70px; background: url(../images/main/money_icon04.svg)no-repeat center;}
 .financial_info_box .box01 .list li{flex: 1;}
 .financial_info_box .box01 .list li a h6{font-size: 20px; color: #fff;}
 .financial_info_box .box01 .list li a .textBox span,
@@ -2271,8 +2272,7 @@ input[type="radio"]:checked + label .radio_ck::after{
 .financial_info_box .box01 .list li a .view{position: relative; margin-top: auto;  font-weight: 500; color: #fff;}
 .financial_info_box .box01 .list li a .view::before{content: ''; position: absolute; left:0; bottom: -2px; background-color: #fff; width: 0; height: 1px; transition: all .3s;}
 .financial_info_box .box01 .list li a:hover .view::before{width: 100%;}
-.financial_info_box .bar_chart_box{display: flex; flex-wrap: wrap; justify-content: center; gap: 0 5%}
-.financial_info_box .bar_chart_box .bar_chart{width: 47.5%;}
+.financial_info_box .bar_chart_box .bar_chart{width: 100%; margin-bottom: 50px;}
 .financial_info_box .line_chart_box{margin-bottom: 55px;}
 .financial_info_box .tab_chart_box .btn_box{display: flex;}
 .financial_info_box .tab_chart_box .btn_box .btn{height: 50px; line-height: 50px; width: 50%; border-radius: 10px 10px 0 0; background-color: #ededed; font-weight: 50; transition: all .3s;} 
@@ -2296,6 +2296,7 @@ input[type="radio"]:checked + label .radio_ck::after{
 .financial_info_box .tab_chart_content .lnfo_list li .percent_wrap .percent_box{height: 10px; width: 100%; border-radius: 10px; background-color: #ddd;}
 .financial_info_box .tab_chart_content .lnfo_list li .percent_wrap .percent_box span{display: block; width: 20%; height: 100%; background-color: #66a3ff; border-radius: 10px;}
 .financial_info_box .tab_chart_content .lnfo_list li .percent_wrap em{margin-top: -3px; flex-shrink: 0; font-weight: 700; color: #fff;}
+.financial_info_box .tab_chart_content01 .lnfo_list li .number{margin: 0;}
 
 @media (max-width: 1199px){
 
