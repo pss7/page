@@ -54,21 +54,3 @@
         url(fonts/Pretendard-Light.woff) format('woff'),
         url(fonts/Pretendard-Light.otf) format('opentype');
 }
-
-@font-face {
-    font-family: 'GmarketSans';
-    font-style: normal;
-    font-weight: 700;
-    src: url(fonts/GmarketSansBold.woff2) format('font-woff2'),
-        url(fonts/GmarketSansBold.woff) format('woff'),
-        url(fonts/GmarketSansBold.otf) format('opentype');
-}
-
-@font-face {
-    font-family: 'Cafe24Shiningstar';
-    font-style: normal;
-    font-weight: 400;
-    src: url(fonts/Cafe24Shiningstar-v2.0.woff2) format('font-woff2'),
-        url(fonts/Cafe24Shiningstar-v2.0.woff) format('woff'),
-        url(fonts/Cafe24Shiningstar-v2.0.otf) format('opentype');
-}
