@@ -481,12 +481,21 @@
                     ]
                 },
                 options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
                     plugins: {
                         legend: {
                             display: true,
-                            position: 'top'
-                        },
-
+                            position: 'top',
+                            labels: {
+                                font: function (ctx) {
+                                    const width = ctx.chart.width;
+                                    return {
+                                        size: width < 500 ? 10 : 14
+                                    };
+                                }
+                            }
+                        }
                     },
                     scales: {
                         y: {
@@ -495,18 +504,39 @@
                             ticks: {
                                 stepSize: 500000,
                                 callback: function (value) {
-                                    return value.toLocaleString(); // 천 단위 콤마 표시
+                                    return value.toLocaleString(); // 천 단위 콤마
                                 },
-                                color: '#000'
-                            },
+                                color: '#000',
+                                font: function (ctx) {
+                                    return {
+                                        size: ctx.chart.width < 500 ? 10 : 12
+                                    };
+                                }
+                            }
                         },
                         x: {
                             ticks: {
-                                color: '#000'
+                                color: '#000',
+                                font: function (ctx) {
+                                    return {
+                                        size: ctx.chart.width < 500 ? 10 : 12
+                                    };
+                                }
+                            }
+                        }
+                    },
+                    elements: {
+                        point: {
+                            radius: function (ctx) {
+                                return ctx.chart.width < 500 ? 3 : 5;
+                            },
+                            hoverRadius: function (ctx) {
+                                return ctx.chart.width < 500 ? 5 : 8;
                             }
                         }
                     }
                 }
+
             });
 
             // 부서별/분야별 예산 현황 바 차트
@@ -532,6 +562,7 @@
                 },
                 options: {
                     indexAxis: 'y',
+                    maintainAspectRatio: false,
                     plugins: {
                         legend: {
                             display: true,
@@ -587,6 +618,7 @@
                 },
                 options: {
                     indexAxis: 'y',
+                    maintainAspectRatio: false,
                     plugins: {
                         legend: {
                             display: true,
