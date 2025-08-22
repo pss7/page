@@ -2304,7 +2304,6 @@ input[type="radio"]:checked + label .radio_ck::after{
 .financial_info_box .tab_chart_content01 .lnfo_list li .number{margin: 0;}
 .financial_info_box .doughnut_chart_box{width: 100%; height: 650px;}
 
-
 @media (max-width: 1199px){
 
   .financial_info_box h5{margin: 60px 0 28px; padding: 0 0 15px 25px; font-size: 22px;}
