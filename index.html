@@ -429,9 +429,11 @@
                                 <div class="box bar_chart_box">
                                     <div class="bar_chart">
                                         <canvas id="bar_chart01"></canvas>
+                                        <a href="#" class="view modal01">더보기</a>
                                     </div>
                                     <div class="bar_chart">
                                         <canvas id="bar_chart02"></canvas>
+                                        <a href="#" class="view modal02">더보기</a>
                                     </div>
                                 </div>
                             </div>
@@ -466,6 +468,27 @@
             </div>
         </div>
         <!-- //기존 홈페이지 html -->
+
+        <!-- 부서별 -->
+        <div class="chart_modal_wrap chart_modal_wrap01">
+            <div class="chart_modal_box">
+                <div class="bar_chart">
+                    <canvas id="bar_chart03"></canvas>
+                </div>
+                <button class="modal_close modal_close01" aria-label="모달 닫기"></button>
+            </div>
+        </div>
+
+        <!-- 분야별 -->
+        <div class="chart_modal_wrap chart_modal_wrap02">
+            <div class="chart_modal_box">
+                <div class="bar_chart">
+                    <canvas id="bar_chart04"></canvas>
+                </div>
+                <button class="modal_close modal_close02" aria-label="모달 닫기"></button>
+            </div>
+        </div>
+
 
     </div>
     <!-- //wrap -->
@@ -661,7 +684,7 @@
 
             });
 
-            // 부서별/분야별 예산 현황 바 차트
+            // 부서별 예산 현황 바 차트
             new Chart(document.getElementById("bar_chart01"), {
                 type: 'bar',
                 data: {
@@ -716,7 +739,62 @@
                 }
             });
 
-            // 부서별/분야별 예산 현황 바 차트
+            // 부서별 예산 현황 바 차트 - 모달
+            new Chart(document.getElementById("bar_chart03"), {
+                type: 'bar',
+                data: {
+                    labels: [
+                        "복지정책과", "고령사회정책과", "아동정책과", "총무과", "기획예산과",
+                        "교통과", "장애인복지과", "자원순환과", "도로과"
+                    ],
+                    datasets: [
+                        {
+                            label: "편성액",
+                            backgroundColor: "#3e95cd",
+                            data: [320000, 280000, 150000, 300000, 270000, 230000, 200000, 250000, 260000]
+                        },
+                        {
+                            label: "지출액",
+                            backgroundColor: "#8e5ea2",
+                            data: [300000, 250000, 140000, 290000, 240000, 210000, 180000, 230000, 240000]
+                        }
+                    ]
+                },
+                options: {
+                    indexAxis: 'y',
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'top'
+                        },
+                        title: {
+                            display: true,
+                            color: '#000',
+                            font: {
+                                size: 18,
+                                weight: 'bold'
+                            },
+                            text: '부서별 예산 현황'
+                        }
+                    },
+                    scales: {
+                        x: {
+                            min: 0,
+                            max: 400000,
+                            ticks: {
+                                stepSize: 100000,
+                                callback: function (value) {
+                                    return value.toLocaleString(); // 천 단위 콤마
+                                },
+                                color: '#000'
+                            },
+                        }
+                    }
+                }
+            });
+
+            // 분야별 예산 현황 바 차트
             new Chart(document.getElementById("bar_chart02"), {
                 type: 'bar',
                 data: {
@@ -773,10 +851,78 @@
                 }
             });
 
+            // 분야별 예산 현황 바 차트 - 모달
+            new Chart(document.getElementById("bar_chart04"), {
+                type: 'bar',
+                data: {
+                    labels: [
+                        "사회복지", "기타", "일반공공행정", "국토및지역개발", "환경",
+                        "교통및물류", "농림해명수산", "문화및관광", "산업/중소기업및에너지",
+                        "보건", "공공질서및안전", "예비비", "교육"
+                    ],
+                    datasets: [
+                        {
+                            label: "편성액",
+                            backgroundColor: "#3e95cd",
+                            data: [150000, 120000, 300000, 250000, 180000, 220000, 160000, 190000, 210000, 170000, 140000, 100000, 200000]
+                        },
+                        {
+                            label: "지출액",
+                            backgroundColor: "#8e5ea2",
+                            data: [130000, 100000, 280000, 230000, 160000, 200000, 150000, 170000, 190000, 150000, 120000, 90000, 180000]
+                        }
+                    ]
+                },
+                options: {
+                    indexAxis: 'y',
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'top'
+                        },
+                        title: {
+                            display: true,
+                            color: '#000',
+                            font: {
+                                size: 18,
+                                weight: 'bold'
+                            },
+                            text: '분야별 예산 현황'
+                        }
+                    },
+                    scales: {
+                        x: {
+                            min: 0,
+                            max: 400000,
+                            ticks: {
+                                stepSize: 100000,
+                                callback: function (value) {
+                                    return value.toLocaleString();
+                                },
+                                color: '#000'
+                            },
 
+                        }
+                    }
+                }
+            });
         })
-    </script>
 
+        //모달
+        $('.bar_chart .modal01').click(function () {
+            $('.chart_modal_wrap01').fadeIn();
+        });
+        $('.bar_chart .modal02').click(function () {
+            $('.chart_modal_wrap02').fadeIn();
+        });
+        $('.chart_modal_wrap .modal_close01').click(function () {
+            $('.chart_modal_wrap01').fadeOut();
+        });
+        $('.chart_modal_wrap .modal_close02').click(function () {
+            $('.chart_modal_wrap02').fadeOut();
+        });
+    </script>
 
 </body>
 

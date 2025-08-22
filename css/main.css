@@ -2272,9 +2272,10 @@ input[type="radio"]:checked + label .radio_ck::after{
 .financial_info_box .box01 .list li a .view{position: relative; margin-top: auto;  font-weight: 500; color: #fff;}
 .financial_info_box .box01 .list li a .view::before{content: ''; position: absolute; left:0; bottom: -2px; background-color: #fff; width: 0; height: 1px; transition: all .3s;}
 .financial_info_box .box01 .list li a:hover .view::before{width: 100%;}
-.financial_info_box .bar_chart_box .bar_chart{width: 100%; margin-bottom: 50px; overflow-x: auto;}
+.financial_info_box .bar_chart_box .bar_chart{position: relative; width: 100%; margin-bottom: 50px;}
 .financial_info_box .bar_chart_box .bar_chart {width: 100%; max-width: 1000px;    
   height: 60vh; min-height: 300px; margin: 0 auto 55px;}
+.financial_info_box .bar_chart_box .bar_chart .view{padding: 5px 10px; position: absolute; top:0; right:0; color: #000; background-color: #003f7d; border-radius: 50px; color: #fff; font-size: 14px; box-shadow: 5px 5px 10px rgba(0,0,0,.1); font-weight: 500;} 
 .financial_info_box .bar_chart_box .bar_chart canvas {width: 100% !important; height: 100% !important;}
 .financial_info_box .line_chart_box {width: 100%; max-width: 1000px; height: 400px; margin: 0 auto 55px;
 }
@@ -2360,6 +2361,8 @@ input[type="radio"]:checked + label .radio_ck::after{
  .financial_info_box .tab_chart_content .lnfo_list li .percent_wrap em{margin: 0; font-size: 14px;}
  .financial_info_box .tab_chart_content .lnfo_list li .text_layout_box em{font-size: 16px;}
  .financial_info_box .tab_chart_content .lnfo_list li .text_layout_box strong{font-size: 16px;}
+  .financial_info_box .bar_chart_box .bar_chart .view{padding: 5px 7px; font-size: 12px;}
+
 
 }
 
@@ -2369,6 +2372,20 @@ input[type="radio"]:checked + label .radio_ck::after{
   .financial_info_box h5{font-size: 16px;}
   .financial_info_box .sub_title_box em,
   .financial_info_box .sub_title_box span{font-size: 12px;}
-  .financial_info_box .doughnut_chart_box{width: 100%; height: 450px;}
-  
+  .financial_info_box .doughnut_chart_box{width: 100%; height: 450px;}  
+
 }
+
+/* 차트 모달 */
+.chart_modal_wrap{display: none; position: fixed; top:0; left:0; right:0; bottom: 0; background-color: rgba(0,0,0,.5); z-index: 99;}
+.chart_modal_wrap .chart_modal_box{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 30px 20px; max-width: 900px; width: 90%; background-color: #fff; z-index: 999; border-radius: 10px;}
+.chart_modal_wrap .chart_modal_box .bar_chart{position: relative; width: 100%; width: 100%; max-width: 1000px; height: 60vh; min-height: 300px; overflow-y: auto;}
+.chart_modal_wrap .chart_modal_box .bar_chart .view{padding: 5px 10px; position: absolute; top:0; right:0; color: #000; background-color: #003f7d; border-radius: 50px; color: #fff; font-size: 14px; box-shadow: 5px 5px 10px rgba(0,0,0,.1); font-weight: 500;} 
+.chart_modal_wrap .chart_modal_box .bar_chart canvas {width: 100% !important; height: 100% !important;}
+.chart_modal_wrap .modal_close {position: absolute; top: 10px; right: 10px; width: 32px;
+  height: 32px;}
+.chart_modal_wrap .modal_close::before,
+.chart_modal_wrap .modal_close::after {content: ''; position: absolute; top: 50%; left: 50%;
+  width: 20px; height: 2px; background-color: #003f7d; transform-origin: center;}
+.chart_modal_wrap .modal_close::before {transform: translate(-50%, -50%) rotate(45deg);}
+.chart_modal_wrap .modal_close::after {transform: translate(-50%, -50%) rotate(-45deg);}
