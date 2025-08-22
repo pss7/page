@@ -2299,7 +2299,7 @@ input[type="radio"]:checked + label .radio_ck::after{
 .financial_info_box .tab_chart_content .lnfo_list li .text_layout_box strong{font-size: 18px;}
 .financial_info_box .tab_chart_content .lnfo_list li .percent_wrap{display: flex; justify-content: space-between; align-items: center; gap: 0 10px;}
 .financial_info_box .tab_chart_content .lnfo_list li .percent_wrap .percent_box{height: 10px; width: 100%; border-radius: 10px; background-color: #ddd;}
-.financial_info_box .tab_chart_content .lnfo_list li .percent_wrap .percent_box span{display: block; width: 20%; height: 100%; background-color: #66a3ff; border-radius: 10px;}
+.financial_info_box .tab_chart_content .lnfo_list li .percent_wrap .percent_box span{display: block; height: 100%; background-color: #66a3ff; border-radius: 10px;}
 .financial_info_box .tab_chart_content .lnfo_list li .percent_wrap em{margin-top: -3px; flex-shrink: 0; font-weight: 700; color: #fff;}
 .financial_info_box .tab_chart_content01 .lnfo_list li .number{margin: 0;}
 .financial_info_box .doughnut_chart_box{width: 100%; height: 650px;}
